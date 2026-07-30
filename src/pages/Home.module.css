@@ -147,6 +147,15 @@
   gap: 2rem;
 }
 
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
