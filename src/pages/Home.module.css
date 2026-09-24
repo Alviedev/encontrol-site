@@ -4,9 +4,9 @@
   align-items: center;
   text-align: center;
   gap: 1.5rem;
-  padding: 1.5rem 0 4rem 0;
+  padding-bottom: 2.5rem;
   border-bottom: 2px solid var(--blue-accent);
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .logo {
@@ -60,7 +60,7 @@
 }
 
 .section h2 {
-  color: var(--blue-accent);
+  color: var(--blue-heading);
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--blue-mid);
   margin-top: 2rem;

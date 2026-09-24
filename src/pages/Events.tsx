@@ -20,7 +20,7 @@ function Events() {
 
   return (
     <div>
-      <section className={styles.intro}>
+      <section className="intro">
         <h1>Eventos</h1>
         <p>Juntadas, meetups y más de la comunidad EnControl.</p>
 

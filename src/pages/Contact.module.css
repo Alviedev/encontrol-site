@@ -1,5 +1,5 @@
 .intro {
-  padding: 1.5rem 0 4rem 0;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -61,7 +61,7 @@
 }
 
 .card h2 {
-  color: var(--blue-accent);
+  color: var(--blue-heading);
   border-bottom: 1px solid var(--blue-mid);
   padding-bottom: 0.5rem;
 }

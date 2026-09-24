@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "steam": "node scripts/fetch-steam.mjs",
+    "predev": "npm run steam",
     "dev": "vite",
+    "prebuild": "npm run steam",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },

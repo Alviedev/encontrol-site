@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 function About() {
   return (
     <div>
-      <section className={styles.intro}>
+      <section className="intro">
         <h1>Nosotros</h1>
 
         <h1>¿Dónde nace EnControl?</h1>

@@ -80,7 +80,7 @@
 }
 
 .games h2 {
-  color: var(--blue-accent);
+  color: var(--blue-heading);
   border-bottom: 1px solid var(--blue-mid);
   padding-bottom: 0.5rem;
 }

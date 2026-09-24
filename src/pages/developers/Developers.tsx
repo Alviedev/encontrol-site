@@ -33,7 +33,7 @@ function Developers() {
   }, [sort]);
   return (
     <div>
-      <section className={styles.intro}>
+      <section className="intro">
         <h1>Desarrolladores</h1>
         <p>Los estudios e individuos detrás de los juegos en Nuevo León.</p>
         <p>
