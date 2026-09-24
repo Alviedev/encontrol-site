@@ -1,7 +1,8 @@
 import type { Game } from "./common";
 import { getDev } from "./developers";
+import { withSteam } from "./steam";
 
-export const games: Game[] = [
+const gameList: Game[] = [
   {
     id: 1,
     slug: "Eagle-knight-paradox",
@@ -390,3 +391,5 @@ export const games: Game[] = [
     },
   },
 ];
+
+export const games = gameList.map(withSteam);

@@ -1,57 +1,64 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import styles from "./Header.module.css";
+
+const links = [
+  ["/", "Inicio"],
+  ["/about", "Nosotros"],
+  ["/events", "Eventos"],
+  ["/developers", "Devs"],
+  ["/games", "Juegos"],
+  ["/contact", "Contacto"],
+] as const;
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+
+  // Hide while scrolling down, show again as soon as the user scrolls up
+  useMotionValueEvent(scrollY, "change", (y) => {
+    setHidden(y > (scrollY.getPrevious() ?? 0) && y > 150);
+  });
 
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={styles.header}
+      animate={
+        hidden && !open ? { y: "-100%", opacity: 0 } : { y: 0, opacity: 1 }
+      }
+      transition={{ duration: 0.25, ease: "easeOut" }}
+    >
       <Link to="/" className={styles.logo}>
         <img src="/encontrol_logo_animated.gif" alt="EnControl" />
       </Link>
 
-      <button className={styles.hamburger} onClick={() => setOpen(!open)}>
+      <button
+        className={styles.hamburger}
+        onClick={() => setOpen(!open)}
+        aria-label={open ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={open}
+      >
         {open ? "✕" : "☰"}
       </button>
 
       <nav className={`${styles.nav} ${open ? styles.navOpen : ""}`}>
-        <Link className={styles.link} to="/" onClick={() => setOpen(false)}>
-          Inicio
-        </Link>
-        <Link
-          className={styles.link}
-          to="/about"
-          onClick={() => setOpen(false)}
-        >
-          Nosotros
-        </Link>
-        <Link
-          className={styles.link}
-          to="/events"
-          onClick={() => setOpen(false)}
-        >
-          Eventos
-        </Link>
-        <Link className={styles.link} to="/developers">
-          Devs
-        </Link>
-        <Link
-          className={styles.link}
-          to="/games"
-          onClick={() => setOpen(false)}
-        >
-          Juegos
-        </Link>
-        <Link
-          className={styles.link}
-          to="/contact"
-          onClick={() => setOpen(false)}
-        >
-          Contacto
-        </Link>
+        {links.map(([to, label]) => (
+          <NavLink
+            key={to}
+            to={to}
+            end={to === "/"}
+            className={({ isActive }) =>
+              `${styles.link} ${isActive ? styles.active : ""}`
+            }
+            onClick={() => setOpen(false)}
+          >
+            {label}
+          </NavLink>
+        ))}
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

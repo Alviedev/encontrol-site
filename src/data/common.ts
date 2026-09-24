@@ -31,8 +31,8 @@ export type Game = {
   slug: string;
   title: string;
   description: string;
-  steamid?: string;
-  imageUrl: string;
+  imageUrl: string; // tall
+  capsuleUrl?: string; // wide
   clip?: GameClip;
   developers: Developer[];
   store: StoreLinks;
