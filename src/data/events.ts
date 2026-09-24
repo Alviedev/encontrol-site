@@ -1,4 +1,5 @@
 import { formatDate, parseDate } from "./common";
+import { DISCORD_INVITE } from "./socials";
 
 export type EventLocation =
   | { type: "online"; platform: string; url: string }
@@ -243,7 +244,7 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     imageUrl: "/events/Meetup12_poster.png",
-    registerUrl: "https://discord.com/invite/Cad9RaE4s6",
+    registerUrl: DISCORD_INVITE,
   },
 ];
 

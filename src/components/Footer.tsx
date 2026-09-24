@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import { DISCORD_INVITE, INSTAGRAM_URL } from "../data/socials";
 import { FaInstagram, FaDiscord } from "react-icons/fa";
 import { FaBluesky } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -37,7 +38,7 @@ function Footer() {
 
       <div className={styles.social}>
         <a
-          href="https://instagram.com/encontrol.mty"
+          href={INSTAGRAM_URL}
           target="_blank"
           rel="noreferrer"
           aria-label="Instagram"
@@ -53,7 +54,7 @@ function Footer() {
           <FaBluesky />
         </a>
         <a
-          href="https://discord.com/invite/Cad9RaE4s6"
+          href={DISCORD_INVITE}
           target="_blank"
           rel="noreferrer"
           aria-label="Discord"

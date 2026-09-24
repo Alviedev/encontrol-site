@@ -1,4 +1,4 @@
-// Pulls the latest images and release dates for every game with a Steam link
+// Pulls the latest images, descriptions and release dates for every game with a Steam link
 // into src/data/steam.json. Runs before `dev` and `build`; if Steam can't be
 // reached, the existing steam.json is kept so the site still builds.
 import { readFileSync, writeFileSync } from "node:fs";
@@ -6,6 +6,8 @@ import { readFileSync, writeFileSync } from "node:fs";
 const GAMES = new URL("../src/data/games.ts", import.meta.url);
 const OUT = new URL("../src/data/steam.json", import.meta.url);
 const CDN = "https://shared.akamai.steamstatic.com/store_item_assets/";
+const ICON_CDN =
+  "https://shared.akamai.steamstatic.com/community_assets/images/apps/";
 
 const appIds = [
   ...new Set(
@@ -44,11 +46,26 @@ function toRelease(release = {}) {
   }
 }
 
+// Steam descriptions come HTML-escaped ("&quot;", "&amp;"...)
+function decodeEntities(text) {
+  return text
+    ?.replace(/&quot;/g, '"')
+    .replace(/&#0?39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .trim();
+}
+
 async function main() {
   const input = {
     ids: appIds.map((appid) => ({ appid })),
-    context: { language: "english", country_code: "US" },
-    data_request: { include_assets: true, include_release: true },
+    context: { language: "latam", country_code: "MX" }, // Spanish text, English if a game has none
+    data_request: {
+      include_assets: true,
+      include_release: true,
+      include_basic_info: true,
+    },
   };
   const url =
     "https://api.steampowered.com/IStoreBrowseService/GetItems/v1/?input_json=" +
@@ -66,6 +83,10 @@ async function main() {
     data[item.appid] = {
       capsuleUrl: asset(assets.main_capsule_2x ?? assets.main_capsule),
       posterUrl: asset(assets.library_capsule_2x ?? assets.library_capsule),
+      iconUrl:
+        assets.community_icon &&
+        `${ICON_CDN}${item.appid}/${assets.community_icon}.jpg`,
+      description: decodeEntities(item.basic_info?.short_description),
       release: toRelease(item.release),
     };
   }

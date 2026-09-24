@@ -1,4 +1,10 @@
 import styles from "./Home.module.css";
+import {
+  DISCORD_INVITE,
+  discordCounts,
+  INSTAGRAM_URL,
+  INSTAGRAM_FOLLOWERS,
+} from "../data/socials";
 import UpcomingEvents from "../components/UpcomingEvents";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 
@@ -72,9 +78,20 @@ function Home() {
                 Núcleo de reunion, organizacion, y discusion de temas
                 relacionados a videojuegos y la comunidad.
               </p>
+              {discordCounts.members && (
+                <p className={styles.stats}>
+                  <span>{discordCounts.members} miembros</span>
+                  {discordCounts.online && (
+                    <span>
+                      <span className={styles.onlineDot} aria-hidden="true" />
+                      {discordCounts.online} en línea
+                    </span>
+                  )}
+                </p>
+              )}
             </div>
             <a
-              href="https://discord.com/invite/Cad9RaE4s6"
+              href={DISCORD_INVITE}
               target="_blank"
               rel="noreferrer"
               className={`${styles.cardButton} ${styles.discordButton}`}
@@ -90,9 +107,12 @@ function Home() {
                 Sitio de difusión de comunicados. Danos follow para estar al
                 pendiente de todos los eventos, juntadas, proyectos y más!
               </p>
+              <p className={styles.stats}>
+                <span>{INSTAGRAM_FOLLOWERS} seguidores</span>
+              </p>
             </div>
             <a
-              href="https://www.instagram.com/encontrol.mty/"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
               className={`${styles.cardButton} ${styles.instagramButton}`}

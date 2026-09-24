@@ -33,6 +33,7 @@ export type Game = {
   description: string;
   imageUrl: string; // tall
   capsuleUrl?: string; // wide
+  iconUrl?: string; // small square, from Steam
   clip?: GameClip;
   developers: Developer[];
   store: StoreLinks;

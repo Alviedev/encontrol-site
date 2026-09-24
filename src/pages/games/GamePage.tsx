@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
+import DevLogo from "../../components/DevLogo";
 
 function GamePage() {
   const { slug } = useParams();
@@ -49,13 +50,11 @@ function GamePage() {
             {game.developers.map((dev) => (
               <div key={dev.name} className={styles.devRow}>
                 <Link to={`/developers/${dev.slug}`} className={styles.devLink}>
-                  {dev.logoUrl && (
-                    <img
-                      src={dev.logoUrl}
-                      alt={dev.name}
-                      className={styles.teamLogo}
-                    />
-                  )}
+                  <DevLogo
+                    dev={dev}
+                    className={styles.teamLogo}
+                    initial={false}
+                  />
                   {dev.name}
                 </Link>
                 <SocialIcons links={dev.links} />

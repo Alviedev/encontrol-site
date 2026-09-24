@@ -36,18 +36,11 @@
 }
 
 .logo {
-  width: 100%;
-  max-width: 280px;
-  height: auto;
+  width: 220px;
+  height: 220px;
   object-fit: contain;
   image-rendering: pixelated;
-}
-
-.logoPlaceholder {
-  width: 200px;
-  height: 200px;
   background-color: var(--blue-mid);
-  border: 2px solid var(--blue-accent);
   display: flex;
   align-items: center;
   justify-content: center;

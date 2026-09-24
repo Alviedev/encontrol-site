@@ -1,10 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { developers } from "../../data/developers";
-import { games } from "../../data/games";
+import { gamesByDev } from "../../data/games";
 import styles from "./DeveloperPage.module.css";
 import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import ReportButton from "../../components/ReportButton";
+import DevLogo from "../../components/DevLogo";
 
 function DeveloperPage() {
   const { slug } = useParams();
@@ -21,9 +22,7 @@ function DeveloperPage() {
     );
   }
 
-  const devGames = games.filter((g) =>
-    g.developers.some((d) => d.name === dev.name),
-  );
+  const devGames = gamesByDev(dev);
 
   return (
     <div className={styles.container}>
@@ -33,11 +32,7 @@ function DeveloperPage() {
 
       <div className={styles.hero}>
         <div className={styles.logoWrap}>
-          {dev.logoUrl ? (
-            <img src={dev.logoUrl} alt={dev.name} className={styles.logo} />
-          ) : (
-            <div className={styles.logoPlaceholder}>{dev.name[0]}</div>
-          )}
+          <DevLogo dev={dev} className={styles.logo} />
         </div>
         <div className={styles.heroInfo}>
           <h1>{dev.name}</h1>

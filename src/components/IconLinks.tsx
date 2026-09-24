@@ -1,4 +1,5 @@
 import { type IconType } from "react-icons";
+import styles from "./IconLinks.module.css";
 
 // Must list every link key, so a new link type can't be added without an icon
 export type IconMap<K extends string> = Record<
@@ -17,7 +18,7 @@ function IconLinks<K extends string>({
   className?: string;
 }) {
   return (
-    <div className={className}>
+    <div className={`${styles.icons} ${className ?? ""}`}>
       {(Object.entries(icons) as [K, IconMap<K>[K]][]).map(
         ([key, [label, Icon]]) =>
           links[key] && (

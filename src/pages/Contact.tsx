@@ -1,4 +1,5 @@
 import styles from "./Contact.module.css";
+import { DISCORD_INVITE, INSTAGRAM_URL } from "../data/socials";
 import { FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FaBluesky, FaDiscord } from "react-icons/fa6";
 
@@ -16,7 +17,7 @@ function Contact() {
           <p>Síguenos para estar al tanto de novedades, eventos y más.</p>
           <div className={styles.socialLinks}>
             <a
-              href="https://instagram.com/encontrol.mty"
+              href={INSTAGRAM_URL}
               target="_blank"
               rel="noreferrer"
               className={styles.socialLink}
@@ -47,7 +48,7 @@ function Contact() {
             <span>contact@encontrol.dev</span>
           </a>
           <a
-            href="https://discord.com/invite/Cad9RaE4s6"
+            href={DISCORD_INVITE}
             target="_blank"
             rel="noreferrer"
             className={styles.socialLink}

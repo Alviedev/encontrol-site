@@ -5,11 +5,13 @@ import steamData from "./steam.json";
 type SteamInfo = {
   capsuleUrl?: string;
   posterUrl?: string;
+  iconUrl?: string;
+  description?: string;
   release?: ReleaseDate;
 };
 const steam = steamData as Record<string, SteamInfo>;
 
-// Steam's current images and release date override the manual values when available
+// Steam's current images, description and release date override the manual values when available
 export function withSteam(game: Game): Game {
   const appId = game.store.steam?.match(/\/app\/(\d+)/)?.[1];
   const info = appId ? steam[appId] : undefined;
@@ -18,6 +20,8 @@ export function withSteam(game: Game): Game {
     ...game,
     imageUrl: info.posterUrl ?? game.imageUrl,
     capsuleUrl: info.capsuleUrl,
+    iconUrl: info.iconUrl,
+    description: info.description || game.description,
     release: info.release ?? game.release,
   };
 }

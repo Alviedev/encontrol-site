@@ -1,4 +1,4 @@
-import type { Game } from "./common";
+import type { Developer, Game } from "./common";
 import { getDev } from "./developers";
 import { withSteam } from "./steam";
 
@@ -393,3 +393,7 @@ const gameList: Game[] = [
 ];
 
 export const games = gameList.map(withSteam);
+
+export function gamesByDev(dev: Developer): Game[] {
+  return games.filter((g) => g.developers.some((d) => d.slug === dev.slug));
+}

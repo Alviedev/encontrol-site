@@ -1,6 +1,8 @@
 import type { Developer } from "./common";
+import { withBlueskyAvatar } from "./bluesky";
 
-export const developers: Developer[] = [
+// Leave logoUrl out to use the developer's Bluesky profile picture (kept up to date automatically)
+const devList: Developer[] = [
   {
     slug: "Playstorm",
     name: "Playstorm Studios",
@@ -27,8 +29,6 @@ export const developers: Developer[] = [
   {
     slug: "DonAttico",
     name: "Don Attico",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:sdpi3a4hw672aq26weu3qdud/bafkreieplw27vqutl7arbh4xa2djojetwv6y5itpnitw3lwljnl4o26oia@jpeg",
     links: {
       bluesky: "https://bsky.app/profile/whodunnitvn.bsky.social",
       patreon: "https://www.patreon.com/c/WHODUNNIT",
@@ -71,8 +71,6 @@ export const developers: Developer[] = [
   {
     slug: "Calix",
     name: "CalixJumio",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:lwugoxbxtqp7kaimrjwx2nxz/bafkreifrgr33upv6p2yamapmp5txiweiwo3zblj3xj5palak3iuidf5gq4@jpeg",
     links: {
       website: "https://calixjumio.wordpress.com/",
       bluesky: "https://bsky.app/profile/calixjumio.me",
@@ -100,8 +98,6 @@ export const developers: Developer[] = [
   {
     slug: "Maurimo",
     name: "Maurimo",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:m4a24i77j6oxr6b4enanhkyl/bafkreidicgexwdyyqsrzqrspf24p5mx4ocse6xqwji6rzn5u4yxukxelsy",
     links: {
       bluesky: "https://bsky.app/profile/maurimo.dev",
       itch: "https://maurimo.itch.io/",
@@ -192,6 +188,8 @@ export const developers: Developer[] = [
     },
   },
 ];
+
+export const developers = devList.map(withBlueskyAvatar);
 
 export function getDev(name: string): Developer {
   const dev = developers.find((d) => d.name === name);

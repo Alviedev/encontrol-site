@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
+import ButtonGroup from "../../components/ButtonGroup";
+import DevLogo from "../../components/DevLogo";
 
 // Sortable "YYYY-MM-DD"-style key; vaguer releases sort after exact dates in the same period
 function getReleaseOrder(release: ReleaseDate): string {
@@ -70,50 +72,33 @@ function List() {
     <div>
       <section className="intro">
         <h1>Juegos de la Comunidad</h1>
-        <p>Una colección de Videojuegos hechos en Nuevo León.</p>
+        <p>Colección de Videojuegos hechos en Nuevo León</p>
         <p>
           Para agregar tu proyecto,
           <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
-            llena este enlace (Link a Google Forms).
+            llena este enlace (Link a Google Forms)
           </Link>
         </p>
         <div className={styles.controls}>
-          <div className={styles.sorting}>
-            <span>Ordenar por:</span>
-            <button
-              onClick={() => setSort("random")}
-              className={sort === "random" ? styles.active : ""}
-            >
-              Aleatorio
-            </button>
-            <button
-              onClick={() => setSort("title")}
-              className={sort === "title" ? styles.active : ""}
-            >
-              Título
-            </button>
-            <button
-              onClick={() => setSort("release")}
-              className={sort === "release" ? styles.active : ""}
-            >
-              Fecha
-            </button>
-          </div>
-          <div className={styles.sorting}>
-            <span>Vista:</span>
-            <button
-              onClick={() => setView("compact")}
-              className={view === "compact" ? styles.active : ""}
-            >
-              Compacta
-            </button>
-            <button
-              onClick={() => setView("poster")}
-              className={view === "poster" ? styles.active : ""}
-            >
-              Póster
-            </button>
-          </div>
+          <ButtonGroup
+            label="Ordenar por:"
+            options={[
+              ["random", "Aleatorio"],
+              ["title", "Título"],
+              ["release", "Fecha"],
+            ]}
+            value={sort}
+            onChange={setSort}
+          />
+          <ButtonGroup
+            label="Vista:"
+            options={[
+              ["compact", "Compacta"],
+              ["poster", "Póster"],
+            ]}
+            value={view}
+            onChange={setView}
+          />
         </div>
       </section>
 
@@ -141,29 +126,30 @@ function List() {
                 <h3>{game.title}</h3>
               </Link>
               <div className={styles.meta}>
-                {game.developers.slice(0, 5).map((dev) => (
-                  <div key={dev.name} className={styles.devEntry}>
+                <span>{formatRelease(game.release)}</span>
+                <StoreIcons store={game.store} />
+              </div>
+              <p>{game.description}</p>
+              <div className={styles.footer}>
+                <div className={styles.devs}>
+                  {game.developers.slice(0, 5).map((dev) => (
                     <Link
+                      key={dev.name}
                       to={`/developers/${dev.slug}`}
                       className={styles.devLink}
                     >
-                      {dev.logoUrl && (
-                        <img
-                          src={dev.logoUrl}
-                          alt={dev.name}
-                          className={styles.teamLogo}
-                        />
-                      )}
+                      <DevLogo
+                        dev={dev}
+                        className={styles.teamLogo}
+                        initial={false}
+                      />
                       {dev.name}
                     </Link>
-                  </div>
-                ))}
-                <span>{formatRelease(game.release)}</span>
+                  ))}
+                  <SocialIcons links={game.developers[0].links} />
+                </div>
+                <ReportButton type="game" name={game.title} slug={game.slug} />
               </div>
-              <SocialIcons links={game.developers[0].links} />
-              <p>{game.description}</p>
-              <StoreIcons store={game.store} />
-              <ReportButton type="game" name={game.title} slug={game.slug} />
             </div>
           </div>
         ))}

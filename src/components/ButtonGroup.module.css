@@ -1,0 +1,30 @@
+.group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+}
+
+.group button {
+  background-color: transparent;
+  border: 2px solid var(--blue-accent);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+}
+
+.group button:hover {
+  background-color: var(--blue-mid);
+}
+
+.group button.active {
+  background-color: var(--blue-accent);
+}
+
+@media (max-width: 768px) {
+  .group {
+    display: grid;
+    gap: 0.75rem;
+  }
+}

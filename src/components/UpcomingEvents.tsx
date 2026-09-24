@@ -45,6 +45,9 @@ function UpcomingEvents() {
                   className={styles.register}
                 >
                   Regístrate
+                  <span className={styles.arrow} aria-hidden="true">
+                    →
+                  </span>
                 </a>
               )}
             </div>

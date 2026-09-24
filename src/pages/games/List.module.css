@@ -4,30 +4,6 @@
   gap: 1rem 2.5rem;
 }
 
-.sorting {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: var(--font-pixel);
-  font-size: 0.6rem;
-  color: var(--text-muted);
-}
-
-.sorting button {
-  background-color: transparent;
-  border: 2px solid var(--blue-accent);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-}
-
-.sorting button:hover {
-  background-color: var(--blue-mid);
-}
-
-.sorting button.active {
-  background-color: var(--blue-accent);
-}
-
 .list {
   display: flex;
   flex-direction: column;
@@ -131,11 +107,6 @@
     object-fit: contain;
   }
 
-  .sorting {
-    display: grid;
-    gap: 0.75rem;
-  }
-
   .meta {
     display: grid;
   }
@@ -163,12 +134,6 @@
   image-rendering: pixelated;
 }
 
-.devEntry {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .devLink {
   display: inline-flex;
   align-items: center;
@@ -182,6 +147,21 @@
 
 .devLink:hover {
   color: var(--blue-accent);
+}
+
+/* Devs (+ their socials) on the left, report button on the right */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.devs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
 }
 
 /* Compact view: two cards per row */
@@ -220,6 +200,10 @@
 
 .compact .info h3 {
   font-size: 1.25rem;
+}
+
+.compact .footer {
+  margin-top: auto;
 }
 
 .compact .meta {

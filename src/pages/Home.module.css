@@ -132,6 +132,28 @@
   font-size: 1.25rem;
 }
 
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.stats > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.onlineDot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: #23a55a; /* Discord's "online" green */
+}
+
 .discordButton {
   background-color: #5865f2;
   border: 2px solid var(--blue-accent);
