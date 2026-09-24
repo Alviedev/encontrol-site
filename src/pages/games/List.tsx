@@ -1,33 +1,16 @@
 import { useState, useMemo } from "react";
 import { games } from "../../data/games";
-import { type Game, type ReleaseDate } from "../../data/common";
+import { type Game, type ReleaseDate, formatRelease } from "../../data/common";
 import styles from "./List.module.css";
 import { Link } from "react-router-dom";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
 
-function formatRelease(release: ReleaseDate): string {
-  switch (release.type) {
-    case "date":
-      return new Date(release.value).toLocaleDateString("es-MX", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    case "year":
-      return `${release.value}`;
-    case "quarter":
-      return release.value;
-    case "tbd":
-      return "Próximamente";
-  }
-}
-
 function getReleaseOrder(release: ReleaseDate): number {
   switch (release.type) {
     case "date":
-      return new Date(release.value).getFullYear();
+      return parseInt(release.value.slice(0, 4));
     case "year":
       return release.value;
     case "quarter":

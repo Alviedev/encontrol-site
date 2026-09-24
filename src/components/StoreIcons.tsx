@@ -1,6 +1,25 @@
-import { type StoreLinks } from "../data/common";
-import { FaSteam, FaXbox, FaPlaystation } from "react-icons/fa";
-import { SiGogdotcom, SiItchdotio, SiNintendoswitch } from "react-icons/si";
+import IconLinks, { type IconMap } from "./IconLinks";
+import { FaSteam, FaXbox, FaPlaystation, FaGlobe } from "react-icons/fa";
+import {
+  SiGogdotcom,
+  SiItchdotio,
+  SiNintendoswitch,
+  SiKickstarter,
+} from "react-icons/si";
+
+// Add a store here and it becomes a valid key
+export const storeIcons = {
+  steam: ["Steam", FaSteam],
+  gog: ["GOG", SiGogdotcom],
+  itch: ["itch.io", SiItchdotio],
+  playstation: ["PlayStation", FaPlaystation],
+  xbox: ["Xbox", FaXbox],
+  switch: ["Nintendo Switch", SiNintendoswitch],
+  kickstarter: ["Kickstarter", SiKickstarter],
+  website: ["Sitio web", FaGlobe],
+} satisfies IconMap<string>;
+
+export type StoreLinks = Partial<Record<keyof typeof storeIcons, string>>;
 
 function StoreIcons({
   store,
@@ -9,60 +28,7 @@ function StoreIcons({
   store: StoreLinks;
   className?: string;
 }) {
-  return (
-    <div className={className}>
-      {store.steam && (
-        <a
-          href={store.steam}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Steam"
-        >
-          <FaSteam />
-        </a>
-      )}
-      {store.gog && (
-        <a href={store.gog} target="_blank" rel="noreferrer" aria-label="GOG">
-          <SiGogdotcom />
-        </a>
-      )}
-      {store.itch && (
-        <a
-          href={store.itch}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="itch.io"
-        >
-          <SiItchdotio />
-        </a>
-      )}
-      {store.playstation && (
-        <a
-          href={store.playstation}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="PlayStation"
-        >
-          <FaPlaystation />
-        </a>
-      )}
-      {store.xbox && (
-        <a href={store.xbox} target="_blank" rel="noreferrer" aria-label="Xbox">
-          <FaXbox />
-        </a>
-      )}
-      {store.switch && (
-        <a
-          href={store.switch}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Nintendo Switch"
-        >
-          <SiNintendoswitch />
-        </a>
-      )}
-    </div>
-  );
+  return <IconLinks links={store} icons={storeIcons} className={className} />;
 }
 
 export default StoreIcons;

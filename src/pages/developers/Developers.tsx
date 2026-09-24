@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { developers, games } from "../../data/games";
+import { developers } from "../../data/developers";
+import { games } from "../../data/games";
 import styles from "./Developers.module.css";
 import SocialIcons from "../../components/SocialIcons";
 import { useState, useMemo } from "react";

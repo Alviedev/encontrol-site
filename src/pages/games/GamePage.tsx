@@ -1,28 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { games } from "../../data/games";
-import { type ReleaseDate } from "../../data/common";
+import { formatRelease } from "../../data/common";
 import styles from "./GamePage.module.css";
 import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
-
-function formatRelease(release: ReleaseDate): string {
-  switch (release.type) {
-    case "date":
-      return new Date(release.value).toLocaleDateString("es-MX", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-    case "year":
-      return `${release.value}`;
-    case "quarter":
-      return release.value;
-    case "tbd":
-      return "Próximamente";
-  }
-}
 
 function GamePage() {
   const { slug } = useParams();

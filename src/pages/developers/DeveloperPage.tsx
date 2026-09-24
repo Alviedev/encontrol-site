@@ -1,78 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import { developers, games } from "../../data/games";
-import { type TeamLinks } from "../../data/common";
+import { developers } from "../../data/developers";
+import { games } from "../../data/games";
 import styles from "./DeveloperPage.module.css";
-import { FaInstagram, FaFacebook, FaGlobe, FaArrowLeft } from "react-icons/fa";
-import { FaBluesky, FaXTwitter } from "react-icons/fa6";
-import { SiItchdotio } from "react-icons/si";
+import { FaArrowLeft } from "react-icons/fa";
+import SocialIcons from "../../components/SocialIcons";
 import ReportButton from "../../components/ReportButton";
-
-function DevIcons({ links }: { links: TeamLinks }) {
-  return (
-    <div className={styles.icons}>
-      {links.website && (
-        <a
-          href={links.website}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Sitio web"
-        >
-          <FaGlobe />
-        </a>
-      )}
-      {links.instagram && (
-        <a
-          href={links.instagram}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-      )}
-      {links.facebook && (
-        <a
-          href={links.facebook}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
-        </a>
-      )}
-      {links.twitter && (
-        <a
-          href={links.twitter}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Twitter"
-        >
-          <FaXTwitter />
-        </a>
-      )}
-      {links.bluesky && (
-        <a
-          href={links.bluesky}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Bluesky"
-        >
-          <FaBluesky />
-        </a>
-      )}
-      {links.itch && (
-        <a
-          href={links.itch}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="itch.io"
-        >
-          <SiItchdotio />
-        </a>
-      )}
-    </div>
-  );
-}
 
 function DeveloperPage() {
   const { slug } = useParams();
@@ -110,7 +42,7 @@ function DeveloperPage() {
         <div className={styles.heroInfo}>
           <h1>{dev.name}</h1>
           {dev.bio && <p className={styles.bio}>{dev.bio}</p>}
-          <DevIcons links={dev.links} />
+          <SocialIcons links={dev.links} className={styles.icons} />
           <ReportButton type="developer" name={dev.name} slug={dev.slug} />
         </div>
       </div>

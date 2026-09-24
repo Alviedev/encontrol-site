@@ -1,35 +1,20 @@
 import { useState } from "react";
 import UpcomingEvents from "../components/UpcomingEvents";
-import { events, type EventLocation } from "../data/events";
+import {
+  events,
+  isPast,
+  formatEventDate,
+  formatLocation,
+} from "../data/events";
 import styles from "./Events.module.css";
 
-function formatDate(date: string): string {
-  const parsed = new Date(date);
-  if (isNaN(parsed.getTime())) {
-    return date;
-  }
-  return parsed.toLocaleDateString("es-MX", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-function formatLocation(location: EventLocation): string {
-  switch (location.type) {
-    case "online":
-      return `Online · ${location.platform}`;
-    case "inperson":
-      return `${location.venue} · ${location.city}`;
-  }
-}
-
-const pastEvents = events.filter((e) => e.status === "past");
+const pastEvents = events.filter(isPast);
 
 function Events() {
   const [order, setOrder] = useState<"asc" | "desc">("desc");
 
   const past = [...pastEvents].sort((a, b) => {
-    const diff = new Date(a.date).getTime() - new Date(b.date).getTime();
+    const diff = a.date.localeCompare(b.date);
     return order === "asc" ? diff : -diff;
   });
 
@@ -67,7 +52,7 @@ function Events() {
         <div className={styles.list}>
           {past.map((event, index) => (
             <div
-              key={event.id}
+              key={event.title}
               className={`${styles.card} ${index % 2 !== 0 ? styles.reverse : ""}`}
             >
               {event.imageUrl && (
@@ -82,12 +67,12 @@ function Events() {
               <div
                 className={`${styles.cardInfo} ${!event.imageUrl ? styles.cardInfoFull : ""}`}
               >
-                <span className={styles.date}>{formatDate(event.date)}</span>
+                <span className={styles.date}>{formatEventDate(event)}</span>
                 <h3>{event.title}</h3>
                 <span className={styles.location}>
                   {formatLocation(event.location)}
                 </span>
-                <p>{event.status === "past" && event.recap}</p>
+                <p>{event.recap ?? event.description}</p>
               </div>
             </div>
           ))}

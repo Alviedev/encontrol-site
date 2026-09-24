@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { QRCode } from "react-qr-code";
 import { games } from "../data/games";
+import { isReleased } from "../data/common";
 import styles from "./Showreel.module.css";
 
 const clips = games
@@ -21,7 +22,7 @@ function Showreel() {
 
   const game = clips[current];
   const clip = game?.clip;
-  const showWishlist = !game?.released;
+  const showWishlist = !game || !isReleased(game.release);
 
   function advance() {
     setVisible(false); //fadeout

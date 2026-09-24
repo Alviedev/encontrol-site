@@ -1,7 +1,42 @@
-import { type TeamLinks } from "../data/common";
-import { FaInstagram, FaFacebook, FaGlobe } from "react-icons/fa";
-import { FaBluesky, FaXTwitter } from "react-icons/fa6";
-import { SiItchdotio } from "react-icons/si";
+import IconLinks, { type IconMap } from "./IconLinks";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaGlobe,
+  FaSteam,
+  FaDiscord,
+  FaYoutube,
+} from "react-icons/fa";
+import {
+  FaBluesky,
+  FaXTwitter,
+  FaLinkedin,
+  FaVimeoV,
+  FaTiktok,
+  FaPatreon,
+} from "react-icons/fa6";
+import { SiItchdotio, SiLinktree, SiWebtoon } from "react-icons/si";
+
+// Add a platform here and it becomes a valid key
+export const socialIcons = {
+  website: ["Sitio web", FaGlobe],
+  instagram: ["Instagram", FaInstagram],
+  facebook: ["Facebook", FaFacebook],
+  twitter: ["Twitter", FaXTwitter],
+  bluesky: ["Bluesky", FaBluesky],
+  youtube: ["YouTube", FaYoutube],
+  vimeo: ["Vimeo", FaVimeoV],
+  linkedin: ["LinkedIn", FaLinkedin],
+  discord: ["Discord", FaDiscord],
+  itch: ["itch.io", SiItchdotio],
+  steam: ["Steam", FaSteam],
+  linktree: ["Linktree", SiLinktree],
+  tiktok: ["TikTok", FaTiktok],
+  webtoon: ["Webtoon", SiWebtoon],
+  patreon: ["Patreon", FaPatreon],
+} satisfies IconMap<string>;
+
+export type TeamLinks = Partial<Record<keyof typeof socialIcons, string>>;
 
 function SocialIcons({
   links,
@@ -10,70 +45,7 @@ function SocialIcons({
   links: TeamLinks;
   className?: string;
 }) {
-  return (
-    <div className={className}>
-      {links.website && (
-        <a
-          href={links.website}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Sitio web"
-        >
-          <FaGlobe />
-        </a>
-      )}
-      {links.instagram && (
-        <a
-          href={links.instagram}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
-      )}
-      {links.facebook && (
-        <a
-          href={links.facebook}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Facebook"
-        >
-          <FaFacebook />
-        </a>
-      )}
-      {links.twitter && (
-        <a
-          href={links.twitter}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Twitter"
-        >
-          <FaXTwitter />
-        </a>
-      )}
-      {links.bluesky && (
-        <a
-          href={links.bluesky}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Bluesky"
-        >
-          <FaBluesky />
-        </a>
-      )}
-      {links.itch && (
-        <a
-          href={links.itch}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="itch.io"
-        >
-          <SiItchdotio />
-        </a>
-      )}
-    </div>
-  );
+  return <IconLinks links={links} icons={socialIcons} className={className} />;
 }
 
 export default SocialIcons;

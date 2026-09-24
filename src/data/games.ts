@@ -1,157 +1,5 @@
-import type { Developer, Game } from "./common";
-
-export const developers: Developer[] = [
-  {
-    slug: "Playstorm",
-    name: "Playstorm Studios",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/eac40994c080b6a217fca7576dbd5f2434beabd1_full.jpg",
-    links: {
-      website: "https://encontrol.dev",
-    },
-  },
-  {
-    slug: "PrettyScar",
-    name: "Pretty Scar",
-    logoUrl:
-      "https://pbs.twimg.com/profile_images/1902760092984070144/q8AxPHop_400x400.jpg",
-    links: {
-      bluesky: "https://bsky.app/profile/prettyscar.dev",
-    },
-  },
-  {
-    slug: "DonAttico",
-    name: "Don Attico",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:sdpi3a4hw672aq26weu3qdud/bafkreieplw27vqutl7arbh4xa2djojetwv6y5itpnitw3lwljnl4o26oia@jpeg",
-    links: {
-      bluesky: "https://bsky.app/profile/whodunnitvn.bsky.social",
-    },
-  },
-  {
-    slug: "FunkyCanCreative",
-    name: "Funky Can Creative",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/a5226947eb4f619efb9f9b7b1823587473bbbec4_full.jpg",
-    links: {
-      bluesky: "https://bsky.app/profile/whodunnitvn.bsky.social",
-      twitter: "https://x.com/FunkyCanDev",
-      instagram: "https://www.instagram.com/funkycancreative/",
-    },
-  },
-  {
-    slug: "Headless",
-    name: "Headless",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/baf43430b4ea204c1068f2c9c5bb1f3346c0660b_full.jpg",
-    links: {
-      twitter: "https://x.com/Headless_Games",
-      website: "https://www.headlessvideogames.com/",
-    },
-  },
-  {
-    slug: "PPStudio",
-    name: "Pixel Perfect Studios",
-    logoUrl:
-      "https://i0.wp.com/www.imcsw.com/wp-content/uploads/2019/05/cropped-PPStudio-Logo-Round.png",
-    links: {
-      website: "https://www.pixelperfectstudio.mx/",
-    },
-  },
-  {
-    slug: "Calix",
-    name: "CalixJumio",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:lwugoxbxtqp7kaimrjwx2nxz/bafkreifrgr33upv6p2yamapmp5txiweiwo3zblj3xj5palak3iuidf5gq4@jpeg",
-    links: {
-      website: "https://calixjumio.wordpress.com/",
-      bluesky: "https://bsky.app/profile/calixjumio.me",
-    },
-  },
-  {
-    slug: "Ignita",
-    name: "Ignita Games",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/8eda51bf7a158755e5f9b0d81c08c82b790872db_full.jpg",
-    links: {
-      bluesky: "https://bsky.app/profile/marcoelz.bsky.social",
-    },
-  },
-  {
-    slug: "Incisor",
-    name: "Incisor Studios",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/82fe62b9a2d7bd7add4a8017e0b2ddce54ed4eda_full.jpg",
-    links: {
-      itch: "https://incisor-studios.itch.io/",
-      website: "https://incisorstudios.com/",
-    },
-  },
-  {
-    slug: "Maurimo",
-    name: "Maurimo",
-    logoUrl:
-      "https://cdn.bsky.app/img/avatar/plain/did:plc:m4a24i77j6oxr6b4enanhkyl/bafkreigmws7rp25ss43do2sibxfbwlraq25shxmba2wy6tkm3wgk3xsn34",
-    links: {
-      bluesky: "https://bsky.app/profile/maurimo.dev",
-      itch: "https://maurimo.itch.io/",
-      website: "https://maurimo.dev/",
-    },
-  },
-  {
-    slug: "VFS",
-    name: "VFS",
-    logoUrl:
-      "https://avatars.fastly.steamstatic.com/91a39256e375d9d9b8e1608f3f4e44572d00a808_full.jpg",
-    links: {},
-  },
-  {
-    slug: "Salem",
-    name: "Salem Electrónica",
-    links: {},
-  },
-  {
-    slug: "FelixRaymundo",
-    name: "Felix Raymundo",
-    links: {
-      youtube: "https://www.youtube.com/@mundayongstudio",
-    },
-  },
-  {
-    slug: "RBIE",
-    name: "RBIE",
-    logoUrl: "/devs/RbieLogo.png",
-    links: {
-      bluesky: "https://bsky.app/profile/ikaexo.bsky.social",
-    },
-  },
-  {
-    slug: "PaperBoatStudios",
-    name: "Paper Boat Studios",
-    links: {},
-  },
-  {
-    slug: "Carlos_7x",
-    name: "Carlos_7x",
-    links: {
-      itch: "https://carlos-7x.itch.io/",
-    },
-  },
-  {
-    slug: "Skyque",
-    name: "Skyque",
-    links: {
-      twitter: "https://x.com/Skyque10",
-      youtube: "https://www.youtube.com/@SkyqueDev",
-    },
-  },
-];
-
-export function getDev(name: string): Developer {
-  const dev = developers.find((d) => d.name === name);
-  if (!dev) throw new Error(`Developer "${name}" not found`);
-  return dev;
-}
+import type { Game } from "./common";
+import { getDev } from "./developers";
 
 export const games: Game[] = [
   {
@@ -167,7 +15,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3008700",
     },
     release: { type: "date", value: "2026-09-21" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/m1EZgGiLvrM?autoplay=1&mute=1&start=4",
@@ -185,9 +32,9 @@ export const games: Game[] = [
     developers: [getDev("Pretty Scar")],
     store: {
       steam: "https://store.steampowered.com/app/3151660",
+      kickstarter: "https://www.kickstarter.com/projects/uppercute/uppercute",
     },
     release: { type: "quarter", value: "Q2 2026" },
-    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/i0UM-GxTEXw?autoplay=1&mute=1&start=0",
@@ -208,7 +55,6 @@ export const games: Game[] = [
       itch: "https://donattico.itch.io/whodunnit",
     },
     release: { type: "year", value: 2026 },
-    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/u4JOTpOsfhg?autoplay=1&mute=1&start=4",
@@ -229,7 +75,6 @@ export const games: Game[] = [
       switch: "https://www.nintendo.com/us/store/products/popslinger-switch/",
     },
     release: { type: "date", value: "2022-04-14" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/60VpYYXtVG0?autoplay=1&mute=1&start=10",
@@ -252,7 +97,6 @@ export const games: Game[] = [
         "https://www.nintendo.com/us/store/products/popslinger-vol-2-loveless-switch/",
     },
     release: { type: "date", value: "2024-10-09" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/FmHXIWBuQV0?autoplay=1&mute=1&start=15",
@@ -272,7 +116,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2376610/Underboard/",
     },
     release: { type: "date", value: "2026-02-06" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/ybNyAk3-o-8?autoplay=1&mute=1&start=4",
@@ -287,13 +130,12 @@ export const games: Game[] = [
       "An amazing collaboration with Legends of Learning and Zeptolab. This fun and engaging game will help your kids learn about the different types of energy movement through physics-based puzzles and beutiful collectibles. A game fully designed and developed at Pixel Perfect Studio.",
     imageUrl:
       "https://i0.wp.com/www.imcsw.com/wp-content/uploads/2025/10/OmNomTitle-ezgif.com-video-to-gif-converter-1.gif?w=3840&amp;ssl=1",
-    developers: [getDev("Pixel Perfect Studios")],
+    developers: [getDev("PXL Perfect Studio")],
     store: {
       website:
         "https://games.legendsoflearning.com/game/cut-the-rope-om-nom-s-picture-collection/4581?learning_objective_id=985&partner=legends-developer",
     },
     release: { type: "date", value: "2026-02-06" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/-dAcuOdOMio?autoplay=1&mute=1&start=5",
@@ -313,7 +155,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2976620/Super_Crane_HD/",
     },
     release: { type: "tbd" },
-    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/nGpze0AxYdc?autoplay=1&mute=1&start=0",
@@ -333,7 +174,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2963540/Idle_Waters/",
     },
     release: { type: "date", value: "2025-12-10" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Bl6djZa1riE?autoplay=1&mute=1&start=0",
@@ -353,7 +193,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/1667490/Fostering_Apocalypse/",
     },
     release: { type: "date", value: "2021-07-15" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/JeBe6L4a4lQ?autoplay=1&mute=1&start=15",
@@ -373,7 +212,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3977270/Incorporeal/",
     },
     release: { type: "date", value: "2025-09-25" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/tBl4tiTA9Gk?autoplay=1&mute=1&start=10",
@@ -394,7 +232,6 @@ export const games: Game[] = [
         "https://store.steampowered.com/app/4016530/Merkava_The_Sacred_Armour_of_Meirav/",
     },
     release: { type: "date", value: "2025-10-07" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Y4jTbkh51Es?autoplay=1&mute=1&start=6",
@@ -413,7 +250,6 @@ export const games: Game[] = [
       itch: "https://mundayongstudios.itch.io/vapol-spanish-edition",
     },
     release: { type: "date", value: "2025-10-07" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Em_-2mgbgoI?autoplay=1&mute=1&start=15",
@@ -433,7 +269,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/3345590/Idiots_in_the_DAS/",
     },
     release: { type: "date", value: "2026-08-31" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Q6v0aU29f2M?autoplay=1&mute=1&start=15",
@@ -453,7 +288,6 @@ export const games: Game[] = [
       itch: "https://vov-artik.itch.io/root-out",
     },
     release: { type: "date", value: "2025-04-11" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/JizI8Y5mZmM?autoplay=1&mute=1&start=0",
@@ -473,7 +307,6 @@ export const games: Game[] = [
       itch: "https://carlos-7x.itch.io/knight-of-ice-dx",
     },
     release: { type: "date", value: "2023-06-29" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/TFQNXflauUE?autoplay=1&mute=1&start=15",
@@ -493,7 +326,6 @@ export const games: Game[] = [
       itch: "https://vov-artik.itch.io/metal-war-heretic",
     },
     release: { type: "date", value: "2025-08-22" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/7nNxGzvXA70?autoplay=1&mute=1&start=15",
@@ -508,12 +340,11 @@ export const games: Game[] = [
       "An entertaining and super challenging short platformer for the most hardcore players!",
     imageUrl:
       "https://picon.ngfiles.com/745000/flash_745318_card.png?f1600906928",
-    developers: [getDev("Pixel Perfect Studios")],
+    developers: [getDev("PXL Perfect Studio")],
     store: {
       itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
     },
     release: { type: "date", value: "2020-01-01" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/XMitOZWN86U?autoplay=1&mute=1&start=0",
@@ -533,7 +364,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/2530280/Blooming/",
     },
     release: { type: "date", value: "2020-01-01" },
-    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/b6Ks4Q2XOjM?autoplay=1&mute=1&start=0",
@@ -553,7 +383,6 @@ export const games: Game[] = [
       steam: "https://store.steampowered.com/app/4863130/TeaKnights/",
     },
     release: { type: "tbd" },
-    released: false,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/D-lDLs9DDyo?autoplay=1&mute=1&start=0",
