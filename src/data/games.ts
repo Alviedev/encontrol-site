@@ -159,15 +159,15 @@ export const games: Game[] = [
     slug: "Eagle-knight-paradox",
     title: "Eagle Knight Paradox",
     description:
-      "Eagle Knight Paradox fuses fast-paced mecha action with slice-of-life storytelling. As Ian, defend the futuristic city of Comala 88 while building relationships that shape the world around you. Every choice matters—protect duty, or follow your heart. ",
+      "Eagle Knight Paradox is a story-driven action-adventure that blends high-speed mecha battles with slice-of-life exploration. Step into the neon-lit city of Comala 88, where every choice you make will shape not only the fate of the city but also the lives of the people you meet.",
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3008700/library_600x900_2x.jpg?t=1765331087",
     developers: [getDev("Playstorm Studios")],
     store: {
       steam: "https://store.steampowered.com/app/3008700",
     },
-    release: { type: "year", value: 2026 },
-    released: false,
+    release: { type: "date", value: "2026-09-21" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/m1EZgGiLvrM?autoplay=1&mute=1&start=4",
@@ -425,15 +425,15 @@ export const games: Game[] = [
     slug: "IdiotsInTheDAS",
     title: "Idiots in the DAS",
     description:
-      "Idiots in the DAS is a 2D platformer combined with a turn-based RPG with a particular sense of humor that mocks internet old and new culture and a battle style that focuses a lot on Hit or Miss and gradual HP loss ",
+      "Idiots in the DAS is a colorful parody that combines turn based RPG with 2D platformers, it focuses a lot on HIT or MISS and character progression, along with getting new party members to make unique attacks together in the same turn! It also contains in-game editors to customize and create!",
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3345590/d93f96d82f57ce508842f1fa243647751ddb825e/library_capsule_2x.jpg?t=1763154105",
     developers: [getDev("RBIE")],
     store: {
       steam: "https://store.steampowered.com/app/3345590/Idiots_in_the_DAS/",
     },
-    release: { type: "tbd" },
-    released: false,
+    release: { type: "date", value: "2026-08-31" },
+    released: true,
     clip: {
       type: "youtube",
       url: "https://www.youtube.com/embed/Q6v0aU29f2M?autoplay=1&mute=1&start=15",
