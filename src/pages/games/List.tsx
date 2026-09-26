@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
+import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
 
@@ -74,10 +75,8 @@ function List() {
         <h1>Juegos de la Comunidad</h1>
         <p>Colección de Videojuegos hechos en Nuevo León</p>
         <p>
-          Para agregar tu proyecto,
-          <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
-            llena este enlace (Link a Google Forms)
-          </Link>
+          Para agregar tu proyecto,{" "}
+          <SignupButton type="game" label="llena este formulario" />
         </p>
         <div className={styles.controls}>
           <ButtonGroup

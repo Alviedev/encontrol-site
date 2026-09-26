@@ -5,6 +5,7 @@ import styles from "./Developers.module.css";
 import SocialIcons from "../../components/SocialIcons";
 import { useState, useMemo } from "react";
 import ReportButton from "../../components/ReportButton";
+import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
 import { FaGamepad } from "react-icons/fa";
@@ -35,10 +36,8 @@ function Developers() {
         <h1>Desarrolladores</h1>
         <p>Los estudios e individuos detrás de los juegos en Nuevo León.</p>
         <p>
-          Para agregarte o tu equipo,
-          <Link to={`https://forms.gle/Cf8xVBgmKebvaeYs5`}>
-            llena este enlace (Link a Google Forms)
-          </Link>
+          Para agregarte o tu equipo,{" "}
+          <SignupButton type="developer" label="llena este formulario" />
         </p>
         <ButtonGroup
           label="Ordenar por:"

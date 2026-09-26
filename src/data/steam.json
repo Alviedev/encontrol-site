@@ -20,8 +20,8 @@
     }
   },
   "2376610": {
-    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/0bedbf2b415fe6c4a9b40f883f114459d695543a/capsule_616x353_2x.jpg?t=1790011561",
-    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/eaa976dba35e9d5a604834d875e5e35ba0660665/library_capsule_2x.jpg?t=1790011561",
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/0bedbf2b415fe6c4a9b40f883f114459d695543a/capsule_616x353_2x.jpg?t=1790355541",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/eaa976dba35e9d5a604834d875e5e35ba0660665/library_capsule_2x.jpg?t=1790355541",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2376610/f559b61d3ef95cad52b0798b3c8d82cf4cd2f6a4.jpg",
     "description": "Auto-battler roguelike táctico de construcción de equipo con estilos de juego activos y pasivos. Recluta un equipo mientras exploras mapas llenos de monstruos, construye sinergias, equipa objetos y lanza hechizos para apoyar a tu equipo durante las batallas y ayudarlos a escapar del Underboard.",
     "release": {
@@ -66,10 +66,14 @@
     }
   },
   "3151660": {
-    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/47f6f089c5b1f4410715d4f5a3337b629e272750/capsule_616x353_2x.jpg?t=1790191083",
-    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1790191083",
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/47f6f089c5b1f4410715d4f5a3337b629e272750/capsule_616x353_2x.jpg?t=1790301231",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1790301231",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3151660/74ced76a73008ff53e7fd3ac16604f7dbda077b3.jpg",
-    "description": "Uppercute is a 3D action platformer where, with the help of your sister and the use of your runner skills, you’ll dive into people's minds, face challenging opponents and retrieve valuable information to solve the mystery of your brother's disappearance."
+    "description": "Uppercute es un juego de plataformas y acción en 3D en el que, con la ayuda de tu hermana y  tus habilidades como corredor, te adentrarás en la mente de las personas, te enfrentarás a rivales difíciles y recuperarás información valiosa para resolver el misterio de la desaparición de tu hermano.",
+    "release": {
+      "type": "date",
+      "value": "2026-10-05"
+    }
   },
   "3195370": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3195370/c5e68dacbb094ee08129933748f9d1f89023071f/capsule_616x353_2x.jpg?t=1768885695",

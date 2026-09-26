@@ -336,19 +336,19 @@ const gameList: Game[] = [
   {
     id: 18,
     slug: "WeirdBunnyBanana",
-    title: "Weird Bunny Banana",
+    title: "Weird Bunny Banana - RESILIENT",
     description:
-      "An entertaining and super challenging short platformer for the most hardcore players!",
+      "Weird Bunny Banana is a BDSM-platformer where the game takes control, breaks your confidence, and makes you cry begging to get more of it! (Kinky wink). You will suffer. You will fail. You will be punished, and you'll be satisfied! And you’ll come back for more! Every death is a reminder that you are not in control, You're the game's b**ch. But then… you finally beat the level (or not).",
     imageUrl:
-      "https://picon.ngfiles.com/745000/flash_745318_card.png?f1600906928",
+      "https://img.itch.zone/aW1nLzI5NjI2ODE1LnBuZw==/315x250%23c/MLBsAM.png",
     developers: [getDev("PXL Perfect Studio")],
     store: {
-      itch: "https://ppstudiomty.itch.io/weird-bunny-banana",
+      itch: "https://ppstudiomty.itch.io/weird-bunny-banana-resilient",
     },
-    release: { type: "date", value: "2020-01-01" },
+    release: { type: "date", value: "2026-09-26" },
     clip: {
       type: "youtube",
-      url: "https://www.youtube.com/embed/XMitOZWN86U?autoplay=1&mute=1&start=0",
+      url: "https://www.youtube.com/embed/rkjwe9FvQKA?autoplay=1&mute=1&start=0",
       duration: 30,
     },
   },
