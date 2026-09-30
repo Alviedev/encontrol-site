@@ -1,5 +1,11 @@
 import IconLinks, { type IconMap } from "./IconLinks";
-import { FaSteam, FaXbox, FaPlaystation, FaGlobe } from "react-icons/fa";
+import {
+  FaSteam,
+  FaXbox,
+  FaPlaystation,
+  FaGlobe,
+  FaGooglePlay,
+} from "react-icons/fa";
 import {
   SiGogdotcom,
   SiItchdotio,
@@ -15,6 +21,7 @@ export const storeIcons = {
   playstation: ["PlayStation", FaPlaystation],
   xbox: ["Xbox", FaXbox],
   switch: ["Nintendo Switch", SiNintendoswitch],
+  googleplay: ["Google Play", FaGooglePlay],
   kickstarter: ["Kickstarter", SiKickstarter],
   website: ["Sitio web", FaGlobe],
 } satisfies IconMap<string>;

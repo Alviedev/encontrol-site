@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   events,
   isPast,
@@ -6,6 +5,8 @@ import {
   formatLocation,
 } from "../data/events";
 import styles from "./UpcomingEvents.module.css";
+import SectionHeader from "./SectionHeader";
+import buttonStyles from "./ArrowButton.module.css";
 
 const upcoming = events.filter((e) => !isPast(e));
 
@@ -14,12 +15,11 @@ function UpcomingEvents() {
 
   return (
     <section className={styles.section}>
-      <div className={styles.header}>
-        <h2>Próximos Eventos</h2>
-        <Link to="/events" className={styles.seeAll}>
-          Ver todos →
-        </Link>
-      </div>
+      <SectionHeader
+        title="Próximos Eventos"
+        to="/events"
+        linkLabel="Ver todos"
+      />
       <div className={styles.grid}>
         {upcoming.map((event) => (
           <div key={event.title} className={styles.card}>
@@ -42,10 +42,10 @@ function UpcomingEvents() {
                   href={event.registerUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className={styles.register}
+                  className={buttonStyles.button}
                 >
                   Regístrate
-                  <span className={styles.arrow} aria-hidden="true">
+                  <span className={buttonStyles.arrow} aria-hidden="true">
                     →
                   </span>
                 </a>

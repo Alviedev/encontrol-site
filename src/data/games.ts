@@ -7,8 +7,10 @@ const gameList: Game[] = [
     id: 1,
     slug: "Eagle-knight-paradox",
     title: "Eagle Knight Paradox",
-    description:
-      "Eagle Knight Paradox is a story-driven action-adventure that blends high-speed mecha battles with slice-of-life exploration. Step into the neon-lit city of Comala 88, where every choice you make will shape not only the fate of the city but also the lives of the people you meet.",
+    description: {
+      es: "",
+      en: "Eagle Knight Paradox is a story-driven action-adventure that blends high-speed mecha battles with slice-of-life exploration. Step into the neon-lit city of Comala 88, where every choice you make will shape not only the fate of the city but also the lives of the people you meet.",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3008700/library_600x900_2x.jpg?t=1765331087",
     developers: [getDev("Playstorm Studios")],
@@ -26,8 +28,10 @@ const gameList: Game[] = [
     id: 2,
     slug: "Uppercute",
     title: "Uppercute",
-    description:
-      "Uppercute is a 3D action platformer where, with the help of your sister and the use of your runner skills, you’ll dive into people's minds, face challenging opponents and retrieve valuable information to solve the mystery of your brother's disappearance. ",
+    description: {
+      es: "",
+      en: "Uppercute is a 3D action platformer where, with the help of your sister and the use of your runner skills, you’ll dive into people's minds, face challenging opponents and retrieve valuable information to solve the mystery of your brother's disappearance. ",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1749495379",
     developers: [getDev("Pretty Scar")],
@@ -46,8 +50,10 @@ const gameList: Game[] = [
     id: 3,
     slug: "Whodunnit",
     title: "WHODUNNIT",
-    description:
-      "WHODUNNIT: Hitting Singles is the first episode of a comedic mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?",
+    description: {
+      es: "",
+      en: "WHODUNNIT: Hitting Singles is the first episode of a comedic mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3851280/6ba7398a79a075047ace6b5343b627ec436c5a50/library_capsule_2x.jpg?t=1757969797",
     developers: [getDev("Don Attico"), getDev("Maurimo")],
@@ -66,8 +72,10 @@ const gameList: Game[] = [
     id: 4,
     slug: "PopSlinger",
     title: "PopSlinger",
-    description:
-      "Join a magical girl with a soda-powered arsenal on a dreamy quest to save her home! In this part beat-‘em-up, part musical shooter, you’ll experience the whimsical story of Ria and Gin as they fight against sinister invaders from another dimension…and maybe even groove to that funky beat!",
+    description: {
+      es: "",
+      en: "Join a magical girl with a soda-powered arsenal on a dreamy quest to save her home! In this part beat-‘em-up, part musical shooter, you’ll experience the whimsical story of Ria and Gin as they fight against sinister invaders from another dimension…and maybe even groove to that funky beat!",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/1928320/library_600x900_2x.jpg?t=1693269281",
     developers: [getDev("Funky Can Creative")],
@@ -86,8 +94,10 @@ const gameList: Game[] = [
     id: 5,
     slug: "PopSlinger2",
     title: "PopSlinger Vol. 2 - Loveless",
-    description:
-      "Return to the PopSlinger universe in this coffee-fueled sequel! Join an elite agent and a digital idol on a mission to rescue a lost heroine in a world full of vibrant chaos. Face new enemies, uncover the mysteries of the Purple District, and groove to a freshly brewed beat!",
+    description: {
+      es: "",
+      en: "Return to the PopSlinger universe in this coffee-fueled sequel! Join an elite agent and a digital idol on a mission to rescue a lost heroine in a world full of vibrant chaos. Face new enemies, uncover the mysteries of the Purple District, and groove to a freshly brewed beat!",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3195370/library_600x900_2x.jpg?t=1748658816",
     developers: [getDev("Funky Can Creative")],
@@ -108,8 +118,10 @@ const gameList: Game[] = [
     id: 6,
     slug: "Underboard",
     title: "Underboard",
-    description:
-      "Tactical team-building roguelike auto-battler with active and passive playstyles. Draft a team as you explore maps full of monsters, build synergies, equip items and cast spells to support your team during battles and help them escape the Underboard. ",
+    description: {
+      es: "",
+      en: "Tactical team-building roguelike auto-battler with active and passive playstyles. Draft a team as you explore maps full of monsters, build synergies, equip items and cast spells to support your team during battles and help them escape the Underboard. ",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2376610/1ff8923b5dd303a590f52b8600d184894acc8f11/hero_capsule_2x.jpg?t=1771288428",
     developers: [getDev("Headless")],
@@ -127,8 +139,10 @@ const gameList: Game[] = [
     id: 7,
     slug: "Omnomspicturecollection",
     title: "Om Nom's picture collection",
-    description:
-      "An amazing collaboration with Legends of Learning and Zeptolab. This fun and engaging game will help your kids learn about the different types of energy movement through physics-based puzzles and beutiful collectibles. A game fully designed and developed at Pixel Perfect Studio.",
+    description: {
+      es: "",
+      en: "An amazing collaboration with Legends of Learning and Zeptolab. This fun and engaging game will help your kids learn about the different types of energy movement through physics-based puzzles and beutiful collectibles. A game fully designed and developed at Pixel Perfect Studio.",
+    },
     imageUrl:
       "https://i0.wp.com/www.imcsw.com/wp-content/uploads/2025/10/OmNomTitle-ezgif.com-video-to-gif-converter-1.gif?w=3840&amp;ssl=1",
     developers: [getDev("PXL Perfect Studio")],
@@ -147,8 +161,10 @@ const gameList: Game[] = [
     id: 8,
     slug: "SuperCraneHD",
     title: "Super Crane HD",
-    description:
-      "Retro match 3 about a Bug juggling at his job, BUT NOW IT'S BETTER Match 3 drops to clear them, but your tool changes constantly, so watch out! Be a Bug, Do a Work, Match a 3",
+    description: {
+      es: "",
+      en: "Retro match 3 about a Bug juggling at his job, BUT NOW IT'S BETTER Match 3 drops to clear them, but your tool changes constantly, so watch out! Be a Bug, Do a Work, Match a 3",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2976620/library_600x900_2x.jpg?t=1715316243",
     developers: [getDev("CalixJumio")],
@@ -166,8 +182,10 @@ const gameList: Game[] = [
     id: 9,
     slug: "IdleWaters",
     title: "Idle Waters",
-    description:
-      "A relaxing idle fishing game that waits for you at the bottom of your screen. CATCH fish, BUY upgrades, COMPLETE your collection, and DISPLAY them in your aquarium.",
+    description: {
+      es: "",
+      en: "A relaxing idle fishing game that waits for you at the bottom of your screen. CATCH fish, BUY upgrades, COMPLETE your collection, and DISPLAY them in your aquarium.",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2963540/library_600x900_2x.jpg?t=1754971349",
     developers: [getDev("Ignita Games")],
@@ -185,8 +203,10 @@ const gameList: Game[] = [
     id: 10,
     slug: "FosteringApocalypse",
     title: "Fostering Apocalypse",
-    description:
-      "The demon summoned to embark the second apocalypse is only a child, and a woman who has lost it all resolves to save her. A half-hour long narrative game with survival gameplay elements and two endings. ",
+    description: {
+      es: "",
+      en: "The demon summoned to embark the second apocalypse is only a child, and a woman who has lost it all resolves to save her. A half-hour long narrative game with survival gameplay elements and two endings. ",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/1667490/library_600x900_2x.jpg?t=1623941010",
     developers: [getDev("Incisor Studios"), getDev("Maurimo")],
@@ -204,8 +224,10 @@ const gameList: Game[] = [
     id: 11,
     slug: "Incorporeal",
     title: "Incorporeal",
-    description:
-      "Incorporeal is a dungeon crawler where you play as a treasure hunter who has the ability to sever their soul from their body. Dash through traps, strike foes with your spectral form, and protect your fragile body as you fight, puzzle, and survive the catacombs to claim ancient relics.  ",
+    description: {
+      es: "",
+      en: "Incorporeal is a dungeon crawler where you play as a treasure hunter who has the ability to sever their soul from their body. Dash through traps, strike foes with your spectral form, and protect your fragile body as you fight, puzzle, and survive the catacombs to claim ancient relics.  ",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3977270/51fba81750dd6d9299578d7e813dbd8e4fbd4c90/library_capsule_2x.jpg?t=1757095203",
     developers: [getDev("VFS")],
@@ -223,8 +245,10 @@ const gameList: Game[] = [
     id: 12,
     slug: "Merkava",
     title: "Merkava: The Sacred Armour of Meirav",
-    description:
-      "Save the world from Dinah's threat by defeating angels, demons, beasts, and aliens.",
+    description: {
+      es: "",
+      en: "Save the world from Dinah's threat by defeating angels, demons, beasts, and aliens.",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/4016530/1345f26aa6c352d26012da5a876051d40b5de1be/library_capsule_2x.jpg?t=1757436922",
     developers: [getDev("Salem Electrónica")],
@@ -243,8 +267,10 @@ const gameList: Game[] = [
     id: 13,
     slug: "VAPOL",
     title: "V.A.P.O.L",
-    description:
-      "Videojuego indie de terror psicológico desarrollado durante 8 meses, diseñado para incomodar y desafiar al jugador. V.A.P.O.L no ofrece respuestas claras ni caminos seguros. Cada paso te sumerge más en una atmósfera opresiva donde el miedo no se muestra, se siente. El juego no quiere que sigas avanzando.",
+    description: {
+      es: "Videojuego indie de terror psicológico desarrollado durante 8 meses, diseñado para incomodar y desafiar al jugador. V.A.P.O.L no ofrece respuestas claras ni caminos seguros. Cada paso te sumerge más en una atmósfera opresiva donde el miedo no se muestra, se siente. El juego no quiere que sigas avanzando.",
+      en: "",
+    },
     imageUrl: "https://img.itch.zone/aW1nLzI1OTA0NTEzLnBuZw==/x200/PFR6Ga.png",
     developers: [getDev("Felix Raymundo")],
     store: {
@@ -261,8 +287,10 @@ const gameList: Game[] = [
     id: 14,
     slug: "IdiotsInTheDAS",
     title: "Idiots in the DAS",
-    description:
-      "Idiots in the DAS is a colorful parody that combines turn based RPG with 2D platformers, it focuses a lot on HIT or MISS and character progression, along with getting new party members to make unique attacks together in the same turn! It also contains in-game editors to customize and create!",
+    description: {
+      es: "",
+      en: "Idiots in the DAS is a colorful parody that combines turn based RPG with 2D platformers, it focuses a lot on HIT or MISS and character progression, along with getting new party members to make unique attacks together in the same turn! It also contains in-game editors to customize and create!",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/3345590/d93f96d82f57ce508842f1fa243647751ddb825e/library_capsule_2x.jpg?t=1763154105",
     developers: [getDev("RBIE")],
@@ -280,8 +308,10 @@ const gameList: Game[] = [
     id: 15,
     slug: "RootOut",
     title: "Root Out!",
-    description:
-      "PaperBoat Studios presents a roguelike game for PC, where for the player must make their way through a world filled with fog and fungi enemies to reach their goal, while being hindered by them. To clear the path, the player must activate various sunflowers that will dissipate the fog around them to clear their way; however, at the same time, they must protect the area from enemies with the help of plants that will defend and help the player achieve their goal. Get fun with the variety of plants, guns and powerups that you may find in the run. Root your way to victory!",
+    description: {
+      es: "",
+      en: "PaperBoat Studios presents a roguelike game for PC, where for the player must make their way through a world filled with fog and fungi enemies to reach their goal, while being hindered by them. To clear the path, the player must activate various sunflowers that will dissipate the fog around them to clear their way; however, at the same time, they must protect the area from enemies with the help of plants that will defend and help the player achieve their goal. Get fun with the variety of plants, guns and powerups that you may find in the run. Root your way to victory!",
+    },
     imageUrl:
       "https://img.itch.zone/aW1nLzIwNjY1OTg0LnBuZw==/original/LOQrQb.png",
     developers: [getDev("Paper Boat Studios")],
@@ -299,8 +329,10 @@ const gameList: Game[] = [
     id: 16,
     slug: "KnightOfIceDX",
     title: "Knight of Ice DX",
-    description:
-      "Knight of Ice is a metroidvania game. Explore all the map to find the secrets that will lead you to a different destiny. Defeat all the monsters and fight the knights!",
+    description: {
+      es: "",
+      en: "Knight of Ice is a metroidvania game. Explore all the map to find the secrets that will lead you to a different destiny. Defeat all the monsters and fight the knights!",
+    },
     imageUrl:
       "https://img.itch.zone/aW1nLzEyNjIzMTA2LnBuZw==/original/Px%2BbqA.png",
     developers: [getDev("Carlos_7x")],
@@ -318,8 +350,10 @@ const gameList: Game[] = [
     id: 17,
     slug: "MetalWarHeretic",
     title: "Metal War Heretic",
-    description:
-      "Metal War Heretic is a fast-paced hack n’ slash mobile game where you play as the last human trapped inside a massive war factory. The killer machines, programmed to wipe out all organic life, see you as a heretic in their metallic world. Armed with steel and fury, you must cut your way through relentless hordes of robots in every sector of the factory. Only by defeating all enemies can you activate the portal to advance to the next level. Fight, dodge, and unleash devastating combos as you push toward the factory’s core to stop the genocide threatening humanity. Do you have what it takes to be the heretic who defies the metal? ",
+    description: {
+      es: "",
+      en: "Metal War Heretic is a fast-paced hack n’ slash mobile game where you play as the last human trapped inside a massive war factory. The killer machines, programmed to wipe out all organic life, see you as a heretic in their metallic world. Armed with steel and fury, you must cut your way through relentless hordes of robots in every sector of the factory. Only by defeating all enemies can you activate the portal to advance to the next level. Fight, dodge, and unleash devastating combos as you push toward the factory’s core to stop the genocide threatening humanity. Do you have what it takes to be the heretic who defies the metal? ",
+    },
     imageUrl:
       "https://img.itch.zone/aW1hZ2UvMzgyOTIzNS8yMjgzOTM1OS5wbmc=/794x1000/l41ur5.png",
     developers: [getDev("Paper Boat Studios")],
@@ -337,8 +371,10 @@ const gameList: Game[] = [
     id: 18,
     slug: "WeirdBunnyBanana",
     title: "Weird Bunny Banana - RESILIENT",
-    description:
-      "Weird Bunny Banana is a BDSM-platformer where the game takes control, breaks your confidence, and makes you cry begging to get more of it! (Kinky wink). You will suffer. You will fail. You will be punished, and you'll be satisfied! And you’ll come back for more! Every death is a reminder that you are not in control, You're the game's b**ch. But then… you finally beat the level (or not).",
+    description: {
+      es: "",
+      en: "Weird Bunny Banana is a BDSM-platformer where the game takes control, breaks your confidence, and makes you cry begging to get more of it! (Kinky wink). You will suffer. You will fail. You will be punished, and you'll be satisfied! And you’ll come back for more! Every death is a reminder that you are not in control, You're the game's b**ch. But then… you finally beat the level (or not).",
+    },
     imageUrl:
       "https://img.itch.zone/aW1nLzI5NjI2ODE1LnBuZw==/315x250%23c/MLBsAM.png",
     developers: [getDev("PXL Perfect Studio")],
@@ -356,8 +392,10 @@ const gameList: Game[] = [
     id: 19,
     slug: "Blooming",
     title: "Blooming",
-    description:
-      "Blooming is a 2D action platformer where you wield a bow that transforms into dual blades. Explore interconnected areas in any order, defeat powerful bosses, and absorb their abilities to grow stronger.",
+    description: {
+      es: "",
+      en: "Blooming is a 2D action platformer where you wield a bow that transforms into dual blades. Explore interconnected areas in any order, defeat powerful bosses, and absorb their abilities to grow stronger.",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/2530280/library_600x900_2x.jpg?t=1728594135",
     developers: [getDev("Skyque")],
@@ -375,8 +413,10 @@ const gameList: Game[] = [
     id: 20,
     slug: "TeaKnights",
     title: "TeaKnights",
-    description:
-      "TeaKnights is a Y2K-inspired musical rail shooter set across seven tea-powered biodomes. As apprentice Camellia Jetsworth, blast enemies with TeaSetter REGALIAS, build chain combos to drive the dynamic soundtrack, face bosses, aid fellow knights, explore the overworld, and customize your look. ",
+    description: {
+      es: "",
+      en: "TeaKnights is a Y2K-inspired musical rail shooter set across seven tea-powered biodomes. As apprentice Camellia Jetsworth, blast enemies with TeaSetter REGALIAS, build chain combos to drive the dynamic soundtrack, face bosses, aid fellow knights, explore the overworld, and customize your look. ",
+    },
     imageUrl:
       "https://shared.steamstatic.com/store_item_assets/steam/apps/4863130/06f323498c7ddd7089f2dce4881ed7b38082d33c/library_capsule_2x.jpg?t=1782188645",
     developers: [getDev("Funky Can Creative")],
@@ -390,9 +430,77 @@ const gameList: Game[] = [
       duration: 30,
     },
   },
+  {
+    id: 21,
+    slug: "EchoesBelow",
+    title: "Echoes Below",
+    description: {
+      es: "Desciende a las profundidades del océano y explora un mundo submarino al lado de un misterioso pulpo. Juntos descubrirán criaturas marinas y revelarán los misterios que aguardan en el fondo del mar…",
+      en: "",
+    },
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/4841820/b51c7ec4c4ccc26108d387222f1e337822993fe7/library_capsule_2x.jpg",
+    developers: [getDev("Fang & Fin Studio")],
+    store: {
+      steam: "https://store.steampowered.com/app/4841820/Echoes_Below/",
+    },
+    release: { type: "quarter", value: "Q1 2027" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/yje3QzuncC4?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
+  },
+  {
+    id: 22,
+    slug: "BloppyFish",
+    title: "Bloppy Fish",
+    description: {
+      es: "Bloppy Fish es un arcade sencillo y adictivo donde controlas a un pequeño pez intentando sobrevivir el mayor tiempo posible entre obstáculos. Fácil de aprender, difícil de dominar y perfecto para partidas rápidas.",
+      en: "",
+    },
+    imageUrl: "/games/BloppyFish.png",
+    developers: [getDev("Tockus Games")],
+    store: {
+      googleplay:
+        "https://play.google.com/store/apps/details?id=com.tockusgames.bloppyfish",
+    },
+    release: { type: "date", value: "2026-09-16" },
+  },
+  {
+    id: 23,
+    slug: "Trasmoz",
+    title: "Trasmoz: El Canto del Ave de la Muerte",
+    description: {
+      es: "",
+      en: "Our team is currently working on Trasmoz: El Canto del Ave de la Muerte (Trasmoz: The Song of the Deathbird). It's a classic-style platformer with a gothic atmosphere.",
+    },
+    imageUrl:
+      "https://img.itch.zone/aW1hZ2UvMzc0MDgxOS8zMDA0MjgwNS5wbmc=/original/Fkn2mo.png",
+    developers: [getDev("Salem Electrónica")],
+    store: {
+      itch: "https://salem-electronica.itch.io/trasmoz-el-canto-del-ave-de-la-muerte",
+    },
+    release: { type: "tbd" },
+  },
 ];
 
 export const games = gameList.map(withSteam);
+
+// Slug of the game shown on the home page (e.g. "PopSlinger").
+// Leave empty to rotate through every game, changing each Monday.
+const featuredSlug = "";
+
+export function getFeaturedGame(): Game {
+  if (featuredSlug) {
+    const game = games.find((g) => g.slug === featuredSlug);
+    if (!game) throw new Error(`Featured game "${featuredSlug}" not found`);
+    return game;
+  }
+  // Weeks since the Unix epoch (a Thursday); +3 days makes weeks start on Monday
+  const week = Math.floor((Date.now() / 86_400_000 + 3) / 7);
+  return games[week % games.length];
+}
 
 export function gamesByDev(dev: Developer): Game[] {
   return games.filter((g) => g.developers.some((d) => d.slug === dev.slug));

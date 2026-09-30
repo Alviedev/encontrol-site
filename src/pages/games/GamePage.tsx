@@ -7,6 +7,7 @@ import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
 import DevLogo from "../../components/DevLogo";
+import { t } from "../../i18n";
 
 function GamePage() {
   const { slug } = useParams();
@@ -15,9 +16,9 @@ function GamePage() {
   if (!game) {
     return (
       <div className={styles.notFound}>
-        <h1>Juego no encontrado</h1>
+        <h1>{t({ es: "Juego no encontrado", en: "" })}</h1>
         <Link to="/games" className={styles.back}>
-          <FaArrowLeft /> Volver a la lista
+          <FaArrowLeft /> {t({ es: "Volver a la lista", en: "" })}
         </Link>
       </div>
     );
@@ -34,7 +35,7 @@ function GamePage() {
   return (
     <div className={styles.container}>
       <Link to="/games" className={styles.back}>
-        <FaArrowLeft /> Volver a la lista
+        <FaArrowLeft /> {t({ es: "Volver a la lista", en: "" })}
       </Link>
 
       <div className={styles.hero}>
@@ -42,10 +43,12 @@ function GamePage() {
         <div className={styles.heroInfo}>
           <h1>{game.title}</h1>
           <p className={styles.release}>{formatRelease(game.release)}</p>
-          <p>{game.description}</p>
+          <p>{t(game.description)}</p>
           <div className={styles.section}>
             <h3>
-              {game.developers.length > 1 ? "Desarrolladores" : "Desarrollador"}
+              {game.developers.length > 1
+                ? t({ es: "Desarrolladores", en: "" })
+                : t({ es: "Desarrollador", en: "" })}
             </h3>
             {game.developers.map((dev) => (
               <div key={dev.name} className={styles.devRow}>
@@ -62,7 +65,7 @@ function GamePage() {
             ))}
           </div>
           <div className={styles.section}>
-            <h3>Disponible en</h3>
+            <h3>{t({ es: "Disponible en", en: "" })}</h3>
             <StoreIcons store={game.store} />
           </div>
           <ReportButton type="game" name={game.title} slug={game.slug} />
@@ -84,7 +87,7 @@ function GamePage() {
 
       {relatedGames.length > 0 && (
         <div className={styles.related}>
-          <h2>Más juegos de este desarrollador</h2>
+          <h2>{t({ es: "Más juegos de este desarrollador", en: "" })}</h2>
           <div className={styles.relatedGrid}>
             {relatedGames.map((related) => (
               <Link

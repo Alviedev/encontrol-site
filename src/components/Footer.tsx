@@ -21,7 +21,7 @@ function Footer() {
         >
           <img
             className={styles.supportImage}
-            src="support\jetbrains-mono-white.svg"
+            src="/support/jetbrains-mono-white.svg"
             alt="JetBrains logo."
             width={"150px"}
           ></img>

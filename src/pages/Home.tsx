@@ -6,7 +6,9 @@ import {
   INSTAGRAM_FOLLOWERS,
 } from "../data/socials";
 import UpcomingEvents from "../components/UpcomingEvents";
+import FeaturedGame from "../components/FeaturedGame";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
+import { t } from "../i18n";
 
 const WAVE_WIDTH = 400;
 const WAVE_HEIGHT = 30;
@@ -46,37 +48,48 @@ function Home() {
           <path className={styles.wavePath} d={SINE_WAVE_PATH} />
         </svg>
 
-        <h1>Bienvenido a EnControl</h1>
+        <h1>
+          {t({ es: "Bienvenido a EnControl", en: "Welcome to EnControl" })}
+        </h1>
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "190px", left: "75%", height: "20px" }}
         />
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "120px", left: "20%", height: "60px" }}
         />
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "280px", left: "22.5%", height: "10px" }}
         />
         <p>
-          La comunidad abierta de desarrollo de videojuegos más grande de
-          Monterrey.
+          {t({
+            es: "La comunidad abierta de desarrollo de videojuegos más grande de Monterrey.",
+            en: "The largest videogame development community in Monterrey, Mexico",
+          })}
         </p>
-        <p>Participa a traves de los siguientes medios:</p>
+        <p>
+          {t({
+            es: "Participa a traves de los siguientes medios:",
+            en: "Join using the following links:",
+          })}
+        </p>
         <div className={styles.grid}>
           <section className={`${styles.card} ${styles.discordCard}`}>
             <div className={styles.discordText}>
               <h2>Únete al Discord</h2>
               <p>
-                Núcleo de reunion, organizacion, y discusion de temas
-                relacionados a videojuegos y la comunidad.
+                {t({
+                  es: "Núcleo de reunion, organizacion, y discusion de temas \n relacionados a videojuegos y la comunidad.",
+                  en: "Hub for meetups, organizing, and discussing topics \n revolving videogames and the community.",
+                })}
               </p>
               {discordCounts.members && (
                 <p className={styles.stats}>
@@ -84,7 +97,8 @@ function Home() {
                   {discordCounts.online && (
                     <span>
                       <span className={styles.onlineDot} aria-hidden="true" />
-                      {discordCounts.online} en línea
+                      {discordCounts.online}{" "}
+                      {t({ es: "en linea", en: "online" })}
                     </span>
                   )}
                 </p>
@@ -97,7 +111,7 @@ function Home() {
               className={`${styles.cardButton} ${styles.discordButton}`}
             >
               <FaDiscord />
-              Unirse al servidor
+              {t({ es: "Unirse al servidor", en: "Join server" })}
             </a>
           </section>
           <section className={`${styles.card} ${styles.instagramCard}`}>
@@ -124,6 +138,7 @@ function Home() {
         </div>
       </section>
 
+      <FeaturedGame />
       <UpcomingEvents />
       <section className={styles.section}>
         <h2>¿Quiénes somos?</h2>
