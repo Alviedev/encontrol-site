@@ -221,6 +221,14 @@ const devList: Developer[] = [
       tiktok: "https://www.tiktok.com/@tockusgames7",
     },
   },
+  {
+    slug: "TeamO",
+    name: "Team-O",
+    logoUrl: "/devs/TeamO.jpg",
+    links: {
+      itch: "https://itch.io/profile/teamo",
+    },
+  },
 ];
 
 export const developers = devList.map(withBlueskyAvatar);

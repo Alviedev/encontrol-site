@@ -483,13 +483,51 @@ const gameList: Game[] = [
     },
     release: { type: "tbd" },
   },
+  {
+    id: 24,
+    slug: "DigDoom",
+    title: "DIG DOOM",
+    description: {
+      es: "En DIG DOOM tienes que abrirte camino hacia las profundidades mientras esquivas enemigos que quieren convertirte en piedra. Cada movimiento cuenta, así que piensa rápido y sigue excavando. Simple, rápido y adictivo… pero cuidado, entre más profundo llegas, más difícil se pone. ",
+      en: "",
+    },
+    imageUrl:
+      "https://img.itch.zone/aW1hZ2UvNDUwNzI4MC8yNjg3MjU2NS5wbmc=/original/JBuvLc.png",
+    developers: [getDev("Team-O")],
+    store: {
+      itch: "https://teamo.itch.io/dig-doom",
+    },
+    release: {
+      type: "date",
+      value: "2026-04-24",
+    },
+  },
+  {
+    id: 25,
+    slug: "chronosandwich",
+    title: "Chrono Sandwich",
+    description: {
+      es: "En un futuro donde toda la comida es holográfica, El Robot Chef vive junto a su dueña Astra. Pero cuando ella empieza a olvidar el sabor de la comida real, el pequeño robot decide emprender una misión imposible… ",
+      en: "",
+    },
+    imageUrl:
+      "https://img.itch.zone/aW1hZ2UvNDExMjExNC8yNDUwNzgyMi5wbmc=/794x1000/oWBoED.png",
+    developers: [getDev("Team-O")],
+    store: {
+      itch: "https://teamo.itch.io/chronosandwich",
+    },
+    release: {
+      type: "date",
+      value: "2025-12-11",
+    },
+  },
 ];
 
 export const games = gameList.map(withSteam);
 
-// Slug of the game shown on the home page (e.g. "PopSlinger").
+// Slug of the game shown on the home page (example, "PopSlinger").
 // Leave empty to rotate through every game, changing each Monday.
-const featuredSlug = "";
+const featuredSlug = "Eagle-knight-paradox";
 
 export function getFeaturedGame(): Game {
   if (featuredSlug) {

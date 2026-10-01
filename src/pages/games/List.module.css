@@ -182,12 +182,23 @@
 }
 
 .compact .imageWrap {
+  position: relative;
   padding: 0;
   aspect-ratio: 616 / 353;
   border-bottom: 2px solid var(--blue-accent);
 }
 
+/* Images  leftover space is filled with a blurred copy of the same image instead of empty bars  */
+.compact .imageWrap::before {
+  content: "";
+  position: absolute;
+  inset: -2rem;
+  background: var(--cover) center / cover;
+  filter: blur(1.5rem) brightness(0.6);
+}
+
 .compact .image {
+  position: relative;
   height: 100%;
   border: none;
 }

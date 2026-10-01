@@ -171,7 +171,7 @@ function Home() {
         <p>
           {t({
             es: "Todos somos game devs. No es necesario haber publicado, o estar en la industria para pertenecer a la comunidad.",
-            en: "We are all game devs. It's not required to have published, or to work in the industry to belong in the community.",
+            en: "We are all game devs. It's not a requirement to have published, or to work in the industry to belong in the community.",
           })}
         </p>
       </section>
