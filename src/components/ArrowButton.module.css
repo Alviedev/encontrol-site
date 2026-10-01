@@ -1,0 +1,40 @@
+/* Solid button with an arrow that nudges right on hover */
+.button {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--blue-dark);
+  background-color: var(--blue-heading);
+  padding: 0.5rem 1.1rem;
+  box-shadow: 3px 3px 0 var(--blue-mid);
+  text-decoration: none;
+  transition:
+    background-color 0.15s,
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.button:hover {
+  background-color: var(--white);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 var(--blue-accent);
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--blue-accent);
+}
+
+.arrow {
+  transition: transform 0.15s;
+}
+
+.button:hover .arrow {
+  transform: translateX(3px);
+}

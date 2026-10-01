@@ -42,7 +42,7 @@ export const events: Event[] = [
       url: "discord.com",
     },
     registerUrl: "https://encontrol.dev",
-    imageUrl: "events/Meetup08_poster.png",
+    imageUrl: "/events/Meetup08_poster.png",
   },
   {
     title: "Byte",
@@ -54,7 +54,7 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     recap: "juntada en un cafe de chill.",
-    imageUrl: "events/Byte.png",
+    imageUrl: "/events/Byte.png",
   },
   {
     title: "EnControl en Ladweek",
@@ -104,7 +104,7 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     recap: "Juntada de networking!.",
-    imageUrl: "events/Meetup04_poster.png",
+    imageUrl: "/events/Meetup04_poster.png",
   },
   {
     title: "Meetup 005",
@@ -128,7 +128,7 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     recap: "Juntada de networking!.",
-    imageUrl: "events/Meetup06_poster.png",
+    imageUrl: "/events/Meetup06_poster.png",
   },
   {
     title: "Meetup 007",
@@ -152,7 +152,7 @@ export const events: Event[] = [
       city: "Monterrey, NL",
     },
     recap: "Juntada de networking!.",
-    imageUrl: "events/Meetup08_poster.png",
+    imageUrl: "/events/Meetup08_poster.png",
   },
   {
     title: "Meetup 009",

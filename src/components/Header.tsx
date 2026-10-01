@@ -2,14 +2,15 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import styles from "./Header.module.css";
+import { lang, switchLang, t } from "../i18n";
 
 const links = [
-  ["/", "Inicio"],
-  ["/about", "Nosotros"],
-  ["/events", "Eventos"],
-  ["/developers", "Devs"],
-  ["/games", "Juegos"],
-  ["/contact", "Contacto"],
+  ["/", t({ es: "Inicio", en: "Home" })],
+  ["/events", t({ es: "Eventos", en: "Events" })],
+  ["/developers", t({ es: "Devs", en: "Devs" })],
+  ["/games", t({ es: "Juegos", en: "Games" })],
+  ["/about", t({ es: "Nosotros", en: "Us" })],
+  ["/contact", t({ es: "Contacto", en: "Contact" })],
 ] as const;
 
 function Header() {
@@ -37,7 +38,11 @@ function Header() {
       <button
         className={styles.hamburger}
         onClick={() => setOpen(!open)}
-        aria-label={open ? "Cerrar menú" : "Abrir menú"}
+        aria-label={
+          open
+            ? t({ es: "Cerrar menú", en: "" })
+            : t({ es: "Abrir menú", en: "" })
+        }
         aria-expanded={open}
       >
         {open ? "✕" : "☰"}
@@ -57,6 +62,25 @@ function Header() {
             {label}
           </NavLink>
         ))}
+        {lang === "es" ? (
+          <button
+            className={`${styles.link} ${styles.lang}`}
+            onClick={() => switchLang("en")}
+            lang="en"
+            aria-label="English"
+          >
+            EN 🇺🇸
+          </button>
+        ) : (
+          <button
+            className={`${styles.link} ${styles.lang}`}
+            onClick={() => switchLang("es")}
+            lang="es"
+            aria-label="Español"
+          >
+            ES 🇲🇽
+          </button>
+        )}
       </nav>
     </motion.header>
   );

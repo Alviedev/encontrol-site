@@ -3,6 +3,7 @@ import { DISCORD_INVITE, INSTAGRAM_URL } from "../data/socials";
 import { FaInstagram, FaDiscord } from "react-icons/fa";
 import { FaBluesky } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { t } from "../i18n";
 
 function Footer() {
   function setOpen(_arg0: boolean): void {
@@ -12,7 +13,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.support}>
-        Con el apoyo de:
+        {t({ es: "Con el apoyo de:", en: "With support from:" })}
         <a
           href="https://www.jetbrains.com/"
           target="_blank"
@@ -21,7 +22,7 @@ function Footer() {
         >
           <img
             className={styles.supportImage}
-            src="support\jetbrains-mono-white.svg"
+            src="/support/jetbrains-mono-white.svg"
             alt="JetBrains logo."
             width={"150px"}
           ></img>
@@ -33,7 +34,11 @@ function Footer() {
       </div>
 
       <p className={styles.copyright}>
-        © {new Date().getFullYear()} EnControl. Todos los derechos reservados.
+        © {new Date().getFullYear()} EnControl.
+        {t({
+          es: "Todos los derechos reservados.",
+          en: "All rights reserved.",
+        })}
       </p>
 
       <div className={styles.social}>

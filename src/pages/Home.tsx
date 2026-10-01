@@ -6,7 +6,9 @@ import {
   INSTAGRAM_FOLLOWERS,
 } from "../data/socials";
 import UpcomingEvents from "../components/UpcomingEvents";
+import FeaturedGame from "../components/FeaturedGame";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
+import { t } from "../i18n";
 
 const WAVE_WIDTH = 400;
 const WAVE_HEIGHT = 30;
@@ -46,45 +48,60 @@ function Home() {
           <path className={styles.wavePath} d={SINE_WAVE_PATH} />
         </svg>
 
-        <h1>Bienvenido a EnControl</h1>
+        <h1>
+          {t({ es: "Bienvenido a EnControl", en: "Welcome to EnControl" })}
+        </h1>
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "190px", left: "75%", height: "20px" }}
         />
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "120px", left: "20%", height: "60px" }}
         />
         <img
-          src="gifs/starbig.png"
+          src="/gifs/starbig.png"
           alt="estrellita jiji"
           className={styles.star}
           style={{ top: "280px", left: "22.5%", height: "10px" }}
         />
         <p>
-          La comunidad abierta de desarrollo de videojuegos más grande de
-          Monterrey.
+          {t({
+            es: "La comunidad abierta de desarrolladores de videojuegos más grande de Monterrey.",
+            en: "The largest videogame developer community in Monterrey, Mexico",
+          })}
         </p>
-        <p>Participa a traves de los siguientes medios:</p>
+        <p>
+          {t({
+            es: "Participa a traves de los siguientes medios:",
+            en: "Join using the following links:",
+          })}
+        </p>
         <div className={styles.grid}>
           <section className={`${styles.card} ${styles.discordCard}`}>
             <div className={styles.discordText}>
-              <h2>Únete al Discord</h2>
+              <h2> {t({ es: "Únete al Discord", en: "Join our Discord" })}</h2>
               <p>
-                Núcleo de reunion, organizacion, y discusion de temas
-                relacionados a videojuegos y la comunidad.
+                {t({
+                  es: "Núcleo de reunion, organizacion, y discusion de temas \n relacionados a videojuegos y la comunidad.",
+                  en: "Hub for meetups, organizing, and discussing topics \n revolving videogames and the community.",
+                })}
               </p>
               {discordCounts.members && (
                 <p className={styles.stats}>
-                  <span>{discordCounts.members} miembros</span>
+                  <span>
+                    {discordCounts.members}{" "}
+                    {t({ es: "miembros", en: "members" })}
+                  </span>
                   {discordCounts.online && (
                     <span>
                       <span className={styles.onlineDot} aria-hidden="true" />
-                      {discordCounts.online} en línea
+                      {discordCounts.online}{" "}
+                      {t({ es: "en linea", en: "online" })}
                     </span>
                   )}
                 </p>
@@ -97,18 +114,28 @@ function Home() {
               className={`${styles.cardButton} ${styles.discordButton}`}
             >
               <FaDiscord />
-              Unirse al servidor
+              {t({ es: "Unirse al servidor", en: "Join server" })}
             </a>
           </section>
           <section className={`${styles.card} ${styles.instagramCard}`}>
             <div className={styles.discordText}>
-              <h2>Síguenos en Instagram</h2>
+              <h2>
+                {t({
+                  es: "Síguenos en Instagram",
+                  en: "Follow us on Instagram",
+                })}
+              </h2>
               <p>
-                Sitio de difusión de comunicados. Danos follow para estar al
-                pendiente de todos los eventos, juntadas, proyectos y más!
+                {t({
+                  es: "Sitio de difusión de comunicados. Danos follow para estar al pendiente de todos los eventos, juntadas, proyectos y más!",
+                  en: "Broadcasting channel for communications. Follow us for events, meetups, community projects and more!",
+                })}
               </p>
               <p className={styles.stats}>
-                <span>{INSTAGRAM_FOLLOWERS} seguidores</span>
+                <span>
+                  {INSTAGRAM_FOLLOWERS}{" "}
+                  {t({ es: "seguidores", en: "followers" })}
+                </span>
               </p>
             </div>
             <a
@@ -118,41 +145,55 @@ function Home() {
               className={`${styles.cardButton} ${styles.instagramButton}`}
             >
               <FaInstagram />
-              Seguir
+              {t({ es: "Seguir", en: "Follow" })}
             </a>
           </section>
         </div>
       </section>
 
+      <FeaturedGame />
       <UpcomingEvents />
       <section className={styles.section}>
-        <h2>¿Quiénes somos?</h2>
-        <h3>Comunidad abierta de desarrolladores de videojuegos</h3>
+        <h2> {t({ es: "¿Quiénes somos?", en: "Who are we?" })}</h2>
+        <h3>
+          {" "}
+          {t({
+            es: "Comunidad abierta de desarrolladores de videojuegos",
+            en: "Open game developer community",
+          })}
+        </h3>
         <p>
-          Somos una comunidad abierta a todos, no es exclusiva, se invita a
-          unirse y participar a todos los interesados, ya sean profesionistas,
-          de hobby, novatos o veteranos.
+          {t({
+            es: "Somos una comunidad abierta a todos, no es exclusiva, se invita a unirse y participar a todos los interesados, ya sean profesionistas, de hobby, novatos o veteranos.",
+            en: "Our community is open to all. No exclusivity. Anyone who is a professional, hobbyist, novice, veteran, or simply interested is welcome.",
+          })}
         </p>
         <p>
-          Todos somos game devs. No es necesario haber publicado, o estar en la
-          industria para pertenecer a la comunidad.
+          {t({
+            es: "Todos somos game devs. No es necesario haber publicado, o estar en la industria para pertenecer a la comunidad.",
+            en: "We are all game devs. It's not required to have published, or to work in the industry to belong in the community.",
+          })}
         </p>
       </section>
       <section className={styles.section}>
-        <h2>¿Qué hacemos?</h2>
+        <h2>{t({ es: "¿Qué hacemos?", en: "What do we do?" })} </h2>
         <p>
-          Meetups presenciales: Juntadas de presentaciones y networking en
-          diversas sedes. No hay un fin en particular para las presentaciones,
-          puede ser presentarse a la comunidad, compartir progreso, promocionar
-          proyectos propios
+          {t({
+            es: "Meetups presenciales: Juntadas de presentaciones y networking en diversas sedes. No hay un fin en particular para las presentaciones, puede ser presentarse a la comunidad, compartir progreso, promocionar proyectos propios",
+            en: "In-person meetups: Get-togethers with presentations and networking in diverse sites. Presentations don't have a particular topic, presenters are invited to introduce themselves to the community, share progress or knowledge, and promote projects they're working on.",
+          })}
         </p>
         <p>
-          Coworking virtual: Espacio semanal para trabajar, compartir trabajo o
-          simplemente platicar en torno a la industria
+          {t({
+            es: "Coworking: Espacio semanal para trabajar, compartir trabajo o simplemente platicar en torno a la industria",
+            en: "Coworking: Virtual space to work in tandem with other members of the community, share help and receive help, as well as simply chatting about industry topics.",
+          })}
         </p>
         <p>
-          Bytes presenciales: Presencia en eventos locales como convenciones,
-          artist alleys, conferencias
+          {t({
+            es: "Bytes presenciales: Presencia en eventos locales como convenciones, artist alleys y conferencias",
+            en: "In-person bytes: Local presence in local events such as conventions, artist alleys and conferences.",
+          })}
         </p>
       </section>
     </div>

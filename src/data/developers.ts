@@ -114,7 +114,18 @@ const devList: Developer[] = [
   {
     slug: "Salem",
     name: "Salem Electrónica",
-    links: {},
+    logoUrl: "/devs/salem.gif",
+    links: {
+      linktree: "https://linktr.ee/SalemElectronica",
+      itch: "https://salem-electronica.itch.io/",
+      mastodon: "https://mastodon.gamedev.place/@SalemElectronica",
+      youtube: "https://www.youtube.com/@SalemElectronica",
+      twitter: "https://x.com/SalemElectronic",
+      bluesky: "https://bsky.app/profile/salemelectronica.bsky.social",
+      instagram: "https://www.instagram.com/salemelectronica",
+      facebook: "https://www.facebook.com/SalemElectronica",
+      reddit: "https://www.reddit.com/r/SalemElectronica/",
+    },
   },
   {
     slug: "FelixRaymundo",
@@ -139,8 +150,11 @@ const devList: Developer[] = [
   {
     slug: "Carlos_7x",
     name: "Carlos_7x",
+    logoUrl: "/devs/Carlos_7x.jpg",
     links: {
       itch: "https://carlos-7x.itch.io/",
+      twitter: "https://x.com/Carlos7xGames",
+      youtube: "https://www.youtube.com/user/carlosrdz182",
     },
   },
   {
@@ -185,6 +199,26 @@ const devList: Developer[] = [
       website:
         "https://portafoliojooyink.my.canva.site/cursos?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
       instagram: "https://www.instagram.com/jooyink/",
+    },
+  },
+  {
+    slug: "FangAndFinStudio",
+    name: "Fang & Fin Studio",
+    logoUrl: "/devs/echoesbelow.jpg",
+    links: {
+      tiktok: "https://www.tiktok.com/@_echoesbelow",
+      instagram: "https://www.instagram.com/_echoesbelow/",
+      discord: "https://discord.gg/CAKmUzmKd",
+    },
+  },
+  {
+    slug: "TockusGames",
+    name: "Tockus Games",
+    logoUrl: "/devs/LogoTockusGames.png",
+    links: {
+      facebook: "https://www.facebook.com/share/1EZxUHPTKQ/",
+      instagram: "https://www.instagram.com/tockusgames/",
+      tiktok: "https://www.tiktok.com/@tockusgames7",
     },
   },
 ];

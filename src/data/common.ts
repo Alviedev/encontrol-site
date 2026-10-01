@@ -1,5 +1,6 @@
 import type { TeamLinks } from "../components/SocialIcons";
 import type { StoreLinks } from "../components/StoreIcons";
+import { type Localized, locale, t } from "../i18n";
 
 export type ReleaseDate =
   | { type: "date"; value: string }
@@ -30,7 +31,7 @@ export type Game = {
   id: number;
   slug: string;
   title: string;
-  description: string;
+  description: Localized;
   imageUrl: string; // tall
   capsuleUrl?: string; // wide
   iconUrl?: string; // small square, from Steam
@@ -46,9 +47,9 @@ export function parseDate(value: string): Date {
   return new Date(y, m - 1, d);
 }
 
-// "YYYY-MM-DD" -> "21 de septiembre de 2026"
+// "YYYY-MM-DD" -> "21 de septiembre de 2026" / "September 21, 2026"
 export function formatDate(value: string): string {
-  return parseDate(value).toLocaleDateString("es-MX", {
+  return parseDate(value).toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -64,7 +65,7 @@ export function formatRelease(release: ReleaseDate): string {
     case "quarter":
       return release.value;
     case "tbd":
-      return "Próximamente";
+      return t({ es: "Próximamente", en: "" });
   }
 }
 

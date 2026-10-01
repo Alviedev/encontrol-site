@@ -6,6 +6,8 @@ import {
   FaSteam,
   FaDiscord,
   FaYoutube,
+  FaMastodon,
+  FaReddit,
 } from "react-icons/fa";
 import {
   FaBluesky,
@@ -24,6 +26,7 @@ export const socialIcons = {
   facebook: ["Facebook", FaFacebook],
   twitter: ["Twitter", FaXTwitter],
   bluesky: ["Bluesky", FaBluesky],
+  mastodon: ["Mastodon", FaMastodon],
   youtube: ["YouTube", FaYoutube],
   vimeo: ["Vimeo", FaVimeoV],
   linkedin: ["LinkedIn", FaLinkedin],
@@ -34,6 +37,7 @@ export const socialIcons = {
   tiktok: ["TikTok", FaTiktok],
   webtoon: ["Webtoon", SiWebtoon],
   patreon: ["Patreon", FaPatreon],
+  reddit: ["Reddit", FaReddit],
 } satisfies IconMap<string>;
 
 export type TeamLinks = Partial<Record<keyof typeof socialIcons, string>>;

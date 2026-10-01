@@ -3,7 +3,9 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1667490/capsule_616x353.jpg?t=1626377701",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1667490/library_600x900_2x.jpg?t=1626377701",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/1667490/f952c87d4d76d29e356a3bec1d1a7cd3ea494475.jpg",
-    "description": "The demon summoned to embark the second apocalypse is only a child, and a woman who has lost it all resolves to save her. A half-hour long narrative game with survival gameplay elements and two endings.",
+    "description": {
+      "en": "The demon summoned to embark the second apocalypse is only a child, and a woman who has lost it all resolves to save her. A half-hour long narrative game with survival gameplay elements and two endings."
+    },
     "release": {
       "type": "date",
       "value": "2021-07-15"
@@ -13,7 +15,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1928320/capsule_616x353.jpg?t=1769568665",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1928320/library_600x900_2x.jpg?t=1769568665",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/1928320/b8e5a3e930f6dc0a7ab318812531753f5d2c35eb.jpg",
-    "description": "¡Únete a una chica mágica con un arsenal propulsado por bebidas gaseosas en una misión de ensueño para salvar su hogar! Experimentarás la extravagante historia de Ria y Gin mientras luchan contra siniestros invasores de otra dimensión… ¡e incluso muévete al ritmo de la vibrante música!",
+    "description": {
+      "es": "¡Únete a una chica mágica con un arsenal propulsado por bebidas gaseosas en una misión de ensueño para salvar su hogar! Experimentarás la extravagante historia de Ria y Gin mientras luchan contra siniestros invasores de otra dimensión… ¡e incluso muévete al ritmo de la vibrante música!",
+      "en": "Join a magical girl with a soda-powered arsenal on a dreamy quest to save her home! In this part beat-‘em-up, part musical shooter, you’ll experience the whimsical story of Ria and Gin as they fight against sinister invaders from another dimension…and maybe even groove to that funky beat!"
+    },
     "release": {
       "type": "date",
       "value": "2022-04-14"
@@ -23,7 +28,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/0bedbf2b415fe6c4a9b40f883f114459d695543a/capsule_616x353_2x.jpg?t=1790355541",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/eaa976dba35e9d5a604834d875e5e35ba0660665/library_capsule_2x.jpg?t=1790355541",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2376610/f559b61d3ef95cad52b0798b3c8d82cf4cd2f6a4.jpg",
-    "description": "Auto-battler roguelike táctico de construcción de equipo con estilos de juego activos y pasivos. Recluta un equipo mientras exploras mapas llenos de monstruos, construye sinergias, equipa objetos y lanza hechizos para apoyar a tu equipo durante las batallas y ayudarlos a escapar del Underboard.",
+    "description": {
+      "es": "Auto-battler roguelike táctico de construcción de equipo con estilos de juego activos y pasivos. Recluta un equipo mientras exploras mapas llenos de monstruos, construye sinergias, equipa objetos y lanza hechizos para apoyar a tu equipo durante las batallas y ayudarlos a escapar del Underboard.",
+      "en": "Tactical team-building roguelike auto-battler with active and passive playstyles. Draft a team as you explore maps full of monsters, build synergies, equip items and cast spells to support your team during battles and help them escape the Underboard."
+    },
     "release": {
       "type": "date",
       "value": "2026-02-06"
@@ -33,7 +41,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2530280/capsule_616x353.jpg?t=1768543365",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2530280/library_600x900_2x.jpg?t=1768543365",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2530280/c9b73db1fb587bb8a73d7bfa50b0341643da8fae.jpg",
-    "description": "Blooming es un juego de plataformas y acción 2D en el que empuñas un arco que se transforma en hojas dobles. Explora áreas interconectadas en el orden que quieras, derrota a poderosos jefes y absorbe sus habilidades para volverte más fuerte.",
+    "description": {
+      "es": "Blooming es un juego de plataformas y acción 2D en el que empuñas un arco que se transforma en hojas dobles. Explora áreas interconectadas en el orden que quieras, derrota a poderosos jefes y absorbe sus habilidades para volverte más fuerte.",
+      "en": "Blooming is a 2D action platformer where you wield a bow that transforms into dual blades. Explore interconnected areas in any order, defeat powerful bosses, and absorb their abilities to grow stronger."
+    },
     "release": {
       "type": "date",
       "value": "2026-01-16"
@@ -43,7 +54,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2963540/9ce90da56ef57424681b9c95dabe1523132e71f7/capsule_616x353_2x.jpg?t=1786543836",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2963540/library_600x900_2x.jpg?t=1786543836",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2963540/b0382e0ec4d5acd98c7ccce78de63f0142d104c4.jpg",
-    "description": "Un relajante idle game de pesca que te espera en el inferior de tu pantalla mientras haces otras cosas. PESCA peces, COMPRA mejoras, COMPLETA la colección, y muestra tu peces en el ACUARIO.",
+    "description": {
+      "es": "Un relajante idle game de pesca que te espera en el inferior de tu pantalla mientras haces otras cosas. PESCA peces, COMPRA mejoras, COMPLETA la colección, y muestra tu peces en el ACUARIO.",
+      "en": "A relaxing idle fishing game that waits for you at the bottom of your screen. CATCH fish, BUY upgrades, COMPLETE your collection, and DISPLAY them in your aquarium."
+    },
     "release": {
       "type": "date",
       "value": "2025-06-12"
@@ -53,23 +67,31 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2976620/capsule_616x353.jpg?t=1727717897",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2976620/library_600x900_2x.jpg?t=1727717897",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2976620/69d2726d9862d4523508550c68462b2fa17ff9f9.jpg",
-    "description": "Retro match 3 about a Bug juggling at his job, BUT NOW IT'S BETTER\r\nMatch 3 drops to clear them, but your tool changes constantly, so watch out! \r\nBe a Bug, Do a Work, Match a 3"
+    "description": {
+      "en": "Retro match 3 about a Bug juggling at his job, BUT NOW IT'S BETTER\r\nMatch 3 drops to clear them, but your tool changes constantly, so watch out! \r\nBe a Bug, Do a Work, Match a 3"
+    }
   },
   "3008700": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3008700/a955af8cd1712eb90de7cc5ef11296cdacb51e54/capsule_616x353_2x.jpg?t=1790033394",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3008700/library_600x900_2x.jpg?t=1790033394",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3008700/b9c0b55d93fa6217456570ead4367da093803cb6.jpg",
-    "description": "Eagle Knight Paradox es un juego de acción y aventura narrativo que combina batallas de mecha a toda velocidad con la exploración de la vida cotidiana. Adéntrate en Comala 88, donde cada decisión que tomes no solo definirá el destino de la ciudad, sino también la vida de las personas que conozcas.",
+    "description": {
+      "es": "Eagle Knight Paradox es un juego de acción y aventura narrativo que combina batallas de mecha a toda velocidad con la exploración de la vida cotidiana. Adéntrate en Comala 88, donde cada decisión que tomes no solo definirá el destino de la ciudad, sino también la vida de las personas que conozcas.",
+      "en": "Eagle Knight Paradox is a story-driven action-adventure that blends high-speed mecha battles with slice-of-life exploration. Step into the neon-lit city of Comala 88, where every choice you make will shape not only the fate of the city but also the lives of the people you meet."
+    },
     "release": {
       "type": "date",
       "value": "2026-09-21"
     }
   },
   "3151660": {
-    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/47f6f089c5b1f4410715d4f5a3337b629e272750/capsule_616x353_2x.jpg?t=1790301231",
-    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1790301231",
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/47f6f089c5b1f4410715d4f5a3337b629e272750/capsule_616x353_2x.jpg?t=1790607240",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3151660/16ed08a363857124e7aa8e99b64e6e8ce931b9c1/library_600x900_2x.jpg?t=1790607240",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3151660/74ced76a73008ff53e7fd3ac16604f7dbda077b3.jpg",
-    "description": "Uppercute es un juego de plataformas y acción en 3D en el que, con la ayuda de tu hermana y  tus habilidades como corredor, te adentrarás en la mente de las personas, te enfrentarás a rivales difíciles y recuperarás información valiosa para resolver el misterio de la desaparición de tu hermano.",
+    "description": {
+      "es": "Uppercute es un juego de plataformas y acción en 3D en el que, con la ayuda de tu hermana y  tus habilidades como corredor, te adentrarás en la mente de las personas, te enfrentarás a rivales difíciles y recuperarás información valiosa para resolver el misterio de la desaparición de tu hermano.",
+      "en": "Uppercute is a 3D action platformer where, with the help of your sister and the use of your runner skills, you’ll dive into people's minds, face challenging opponents and retrieve valuable information to solve the mystery of your brother's disappearance."
+    },
     "release": {
       "type": "date",
       "value": "2026-10-05"
@@ -79,7 +101,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3195370/c5e68dacbb094ee08129933748f9d1f89023071f/capsule_616x353_2x.jpg?t=1768885695",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3195370/library_600x900_2x.jpg?t=1768885695",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3195370/3901d0f354c2586df183ebb12983fa1dd3cb0fe6.jpg",
-    "description": "Regresa al universo de PopSlinger en esta secuela impulsada por café. Únete a una agente de élite y a una ídolo digital en una misión para rescatar a una heroína perdida en un mundo lleno de caos vibrante. Enfrenta nuevos enemigos, descubre Distrito Púrpura y disfruta de un ritmo recién elaborado.",
+    "description": {
+      "es": "Regresa al universo de PopSlinger en esta secuela impulsada por café. Únete a una agente de élite y a una ídolo digital en una misión para rescatar a una heroína perdida en un mundo lleno de caos vibrante. Enfrenta nuevos enemigos, descubre Distrito Púrpura y disfruta de un ritmo recién elaborado.",
+      "en": "Return to the PopSlinger universe in this coffee-fueled sequel! Join an elite agent and a digital idol on a mission to rescue a lost heroine in a world full of vibrant chaos. Face new enemies, uncover the mysteries of the Purple District, and groove to a freshly brewed beat!"
+    },
     "release": {
       "type": "date",
       "value": "2024-10-09"
@@ -89,7 +114,10 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3345590/562ea78c751616a33eaf86de6859c4bc55935eb3/capsule_616x353_2x.jpg?t=1788215744",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3345590/d93f96d82f57ce508842f1fa243647751ddb825e/library_capsule_2x.jpg?t=1788215744",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3345590/0f15b9253fcfb476fbe4443a7520fb61137cf99d.jpg",
-    "description": "Idiots in the DAS es una colorida parodia que combina RPG por turnos con plataformas 2D. Se centra en el sistema de aciertos y fallos, la progresión de personajes y el uso de nuevos compañeros para realizar ataques en el mismo turno.\r\n\r\n¡También incluye editores integrados para personalizar y crear!",
+    "description": {
+      "es": "Idiots in the DAS es una colorida parodia que combina RPG por turnos con plataformas 2D. Se centra en el sistema de aciertos y fallos, la progresión de personajes y el uso de nuevos compañeros para realizar ataques en el mismo turno.\r\n\r\n¡También incluye editores integrados para personalizar y crear!",
+      "en": "Idiots in the DAS is a colorful parody that combines turn based RPG with 2D platformers, it focuses a lot on HIT or MISS and character progression, along with getting new party members to make unique attacks together in the same turn!\r\n\r\nIt also contains in-game editors to customize and create!"
+    },
     "release": {
       "type": "date",
       "value": "2026-08-31"
@@ -99,13 +127,17 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3851280/67909c382c64e2c85909e5a9fe2d3efb1a51f6f5/capsule_616x353_2x.jpg?t=1787257468",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3851280/c2f239d8be22875ba5a191f731699003e2cb1391/library_capsule_2x.jpg?t=1787257468",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3851280/8d4e9c4b9b1bde4bdda9d1fc685b032e06171077.jpg",
-    "description": "WHODUNNIT is a mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?"
+    "description": {
+      "en": "WHODUNNIT is a mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?"
+    }
   },
   "3977270": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3977270/ebce0c0048025e515ce065a56645ab49eb1c4c14/capsule_616x353_2x.jpg?t=1760641964",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3977270/51fba81750dd6d9299578d7e813dbd8e4fbd4c90/library_capsule_2x.jpg?t=1760641964",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3977270/3c3f3a19a2736da95d1a2caed244bcf4a7e2c667.jpg",
-    "description": "Incorporeal is a dungeon crawler where you play as a treasure hunter who has the ability to sever their soul from their body. Dash through traps, strike foes with your spectral form, and protect your fragile body as you fight, puzzle, and survive the catacombs to claim ancient relics.",
+    "description": {
+      "en": "Incorporeal is a dungeon crawler where you play as a treasure hunter who has the ability to sever their soul from their body. Dash through traps, strike foes with your spectral form, and protect your fragile body as you fight, puzzle, and survive the catacombs to claim ancient relics."
+    },
     "release": {
       "type": "date",
       "value": "2025-09-25"
@@ -115,16 +147,29 @@
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4016530/02705984115dde21e033222b4910f3fa425373e1/capsule_616x353_2x.jpg?t=1789901572",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4016530/1345f26aa6c352d26012da5a876051d40b5de1be/library_capsule_2x.jpg?t=1789901572",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/4016530/249c927313908fd44394fe8a080ae0145bf09381.jpg",
-    "description": "Save the world from Dinah's threat by defeating angels, demons, beasts, and aliens.",
+    "description": {
+      "en": "Save the world from Dinah's threat by defeating angels, demons, beasts, and aliens."
+    },
     "release": {
       "type": "date",
       "value": "2025-10-07"
+    }
+  },
+  "4841820": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4841820/cb329251e6a2a47d2bdf26e059431be8fbeab218/capsule_616x353_2x.jpg?t=1790829431",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4841820/b51c7ec4c4ccc26108d387222f1e337822993fe7/library_capsule_2x.jpg?t=1790829431",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/4841820/0544928a0e97926cff85bca65b9f36e2f18cb307.jpg",
+    "description": {
+      "es": "Desciende a las profundidades del océano y explora un mundo submarino al lado de un misterioso pulpo. Juntos descubrirán criaturas marinas y revelarán los misterios que aguardan en el fondo del mar…",
+      "en": "Descend into the depths of the ocean and explore an underwater world alongside a mysterious octopus. Together, you will discover marine creatures and uncover the mysteries that await at the bottom of the sea…"
     }
   },
   "4863130": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4863130/12965f0377417cefa221ef93d2475dcf91a81d51/capsule_616x353_2x.jpg?t=1782244025",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4863130/06f323498c7ddd7089f2dce4881ed7b38082d33c/library_capsule_2x.jpg?t=1782244025",
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/4863130/c2ba428ad82c8586fae8c3c5756cc8ab8fe44c1f.jpg",
-    "description": "TeaKnights is a Y2K-inspired musical rail shooter set across seven tea-powered biodomes. As apprentice Camellia Jetsworth, blast enemies with TeaSetter REGALIAS, build chain combos to drive the dynamic soundtrack, face bosses, aid fellow knights, explore the overworld, and customize your look."
+    "description": {
+      "en": "TeaKnights is a Y2K-inspired musical rail shooter set across seven tea-powered biodomes. As apprentice Camellia Jetsworth, blast enemies with TeaSetter REGALIAS, build chain combos to drive the dynamic soundtrack, face bosses, aid fellow knights, explore the overworld, and customize your look."
+    }
   }
 }

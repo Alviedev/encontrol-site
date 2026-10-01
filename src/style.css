@@ -2,6 +2,7 @@
 
 :root {
   --blue-dark: #1a1a2e;
+  --blue-darker: #10101c; /* card backgrounds, a step below the page background */
   --blue-mid: #1a2a6e;
   --blue-accent: #4a90d9;
   --blue-heading: #7fb3ec; /* lighter accent for headings, easier to read on --blue-dark */

@@ -1,0 +1,104 @@
+.section {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  border: 2px solid var(--blue-accent);
+  background-color: var(--blue-darker);
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Stretches to the card's height, so it never leaves a gap under it */
+.media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  align-self: stretch;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.clip,
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+.play {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.playIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  padding-left: 0.3rem; /* the triangle looks centered when nudged right */
+  font-size: 1.75rem;
+  color: var(--white);
+  background-color: rgba(26, 26, 46, 0.8); /* --blue-dark */
+  border: 2px solid var(--blue-accent);
+  transform: translate(-50%, -50%);
+  transition:
+    background-color 0.15s,
+    transform 0.15s;
+}
+
+.play:hover .playIcon,
+.play:focus-visible .playIcon {
+  background-color: var(--blue-accent);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.release {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--blue-accent);
+  line-height: 1.8;
+}
+
+.devs {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+}

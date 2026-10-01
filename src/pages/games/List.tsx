@@ -9,6 +9,7 @@ import ReportButton from "../../components/ReportButton";
 import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
+import { t } from "../../i18n";
 
 // Sortable "YYYY-MM-DD"-style key; vaguer releases sort after exact dates in the same period
 function getReleaseOrder(release: ReleaseDate): string {
@@ -72,28 +73,38 @@ function List() {
   return (
     <div>
       <section className="intro">
-        <h1>Juegos de la Comunidad</h1>
-        <p>Colección de Videojuegos hechos en Nuevo León</p>
+        <h1>
+          {t({ es: "Juegos de la Comunidad", en: "Games by the community" })}
+        </h1>
         <p>
-          Para agregar tu proyecto,{" "}
-          <SignupButton type="game" label="llena este formulario" />
+          {t({
+            es: "Colección de Videojuegos hechos en Nuevo León",
+            en: "Collection of games made in Nuevo León",
+          })}
+        </p>
+        <p>
+          {t({ es: "Para agregar tu proyecto,", en: "To add your project," })}{" "}
+          <SignupButton
+            type="game"
+            label={t({ es: "llena este formulario", en: "fill out this form" })}
+          />
         </p>
         <div className={styles.controls}>
           <ButtonGroup
-            label="Ordenar por:"
+            label={t({ es: "Ordenar por:", en: "Sort by:" })}
             options={[
-              ["random", "Aleatorio"],
-              ["title", "Título"],
-              ["release", "Fecha"],
+              ["random", t({ es: "Aleatorio", en: "Random" })],
+              ["title", t({ es: "Título", en: "Title" })],
+              ["release", t({ es: "Fecha", en: "Date" })],
             ]}
             value={sort}
             onChange={setSort}
           />
           <ButtonGroup
-            label="Vista:"
+            label={t({ es: "Vista:", en: "View" })}
             options={[
-              ["compact", "Compacta"],
-              ["poster", "Póster"],
+              ["compact", t({ es: "Compacta", en: "Compact" })],
+              ["poster", t({ es: "Póster", en: "Poster" })],
             ]}
             value={view}
             onChange={setView}
@@ -128,7 +139,7 @@ function List() {
                 <span>{formatRelease(game.release)}</span>
                 <StoreIcons store={game.store} />
               </div>
-              <p>{game.description}</p>
+              <p>{t(game.description)}</p>
               <div className={styles.footer}>
                 <div className={styles.devs}>
                   {game.developers.slice(0, 5).map((dev) => (

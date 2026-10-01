@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import {
   events,
   isPast,
@@ -6,20 +6,43 @@ import {
   formatLocation,
 } from "../data/events";
 import styles from "./UpcomingEvents.module.css";
+import SectionHeader from "./SectionHeader";
+import buttonStyles from "./ArrowButton.module.css";
+import { t } from "../i18n";
 
 const upcoming = events.filter((e) => !isPast(e));
 
+export const PAST_EVENTS_ID = "past-events";
+
 function UpcomingEvents() {
+  const onEventsPage = useLocation().pathname === "/events";
+
   if (upcoming.length === 0) return null;
 
   return (
     <section className={styles.section}>
-      <div className={styles.header}>
-        <h2>Próximos Eventos</h2>
-        <Link to="/events" className={styles.seeAll}>
-          Ver todos →
-        </Link>
-      </div>
+      <SectionHeader
+        title={t({
+          es: "Próximos Eventos",
+          en: "Upcoming Events",
+        })}
+        to={onEventsPage ? `#${PAST_EVENTS_ID}` : "/events"}
+        linkLabel={
+          onEventsPage
+            ? t({ es: "Ver pasados", en: "See past events" })
+            : t({ es: "Ver todos", en: "View all" })
+        }
+        onLinkClick={
+          onEventsPage
+            ? (e) => {
+                e.preventDefault();
+                document
+                  .getElementById(PAST_EVENTS_ID)
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }
+            : undefined
+        }
+      />
       <div className={styles.grid}>
         {upcoming.map((event) => (
           <div key={event.title} className={styles.card}>
@@ -42,10 +65,13 @@ function UpcomingEvents() {
                   href={event.registerUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className={styles.register}
+                  className={buttonStyles.button}
                 >
-                  Regístrate
-                  <span className={styles.arrow} aria-hidden="true">
+                  {t({
+                    es: "Regístrate",
+                    en: "Sign up",
+                  })}
+                  <span className={buttonStyles.arrow} aria-hidden="true">
                     →
                   </span>
                 </a>

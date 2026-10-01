@@ -57,10 +57,15 @@ function decodeEntities(text) {
     .trim();
 }
 
-async function main() {
+// Steam falls back to English when a game has no Spanish text; leave that out so the manual one shows
+function descriptions(es, en) {
+  return { es: es && es !== en ? es : undefined, en: en || undefined };
+}
+
+async function getItems(language) {
   const input = {
     ids: appIds.map((appid) => ({ appid })),
-    context: { language: "latam", country_code: "MX" }, // Spanish text, English if a game has none
+    context: { language, country_code: "MX" },
     data_request: {
       include_assets: true,
       include_release: true,
@@ -72,7 +77,20 @@ async function main() {
     encodeURIComponent(JSON.stringify(input));
   const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
   if (!res.ok) throw new Error(`Steam responded ${res.status}`);
-  const items = (await res.json()).response?.store_items ?? [];
+  return (await res.json()).response?.store_items ?? [];
+}
+
+async function main() {
+  const [items, englishItems] = await Promise.all([
+    getItems("latam"),
+    getItems("english"),
+  ]);
+  const english = Object.fromEntries(
+    englishItems.map((item) => [
+      item.appid,
+      decodeEntities(item.basic_info?.short_description),
+    ]),
+  );
 
   const data = {};
   for (const item of items) {
@@ -86,7 +104,10 @@ async function main() {
       iconUrl:
         assets.community_icon &&
         `${ICON_CDN}${item.appid}/${assets.community_icon}.jpg`,
-      description: decodeEntities(item.basic_info?.short_description),
+      description: descriptions(
+        decodeEntities(item.basic_info?.short_description),
+        english[item.appid],
+      ),
       release: toRelease(item.release),
     };
   }
