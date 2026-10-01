@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { type CSSProperties, useState, useMemo } from "react";
 import { games } from "../../data/games";
 import { type ReleaseDate, formatRelease } from "../../data/common";
 import styles from "./List.module.css";
@@ -115,54 +115,56 @@ function List() {
       <div
         className={`${styles.list} ${view === "compact" ? styles.compact : ""}`}
       >
-        {sorted.map((game, index) => (
-          <div
-            key={game.id}
-            className={`${styles.card} ${index % 2 !== 0 ? styles.reverse : ""}`}
-          >
-            <Link to={`/games/${game.slug}`} className={styles.imageWrap}>
-              <img
-                src={
-                  view === "compact"
-                    ? (game.capsuleUrl ?? game.imageUrl)
-                    : game.imageUrl
-                }
-                alt={game.title}
-                className={styles.image}
-              />
-            </Link>
-            <div className={styles.info}>
-              <Link to={`/games/${game.slug}`} className={styles.titleLink}>
-                <h3>{game.title}</h3>
+        {sorted.map((game, index) => {
+          const src =
+            view === "compact"
+              ? (game.capsuleUrl ?? game.imageUrl)
+              : game.imageUrl;
+          return (
+            <div
+              key={game.id}
+              className={`${styles.card} ${index % 2 !== 0 ? styles.reverse : ""}`}
+            >
+              <Link
+                to={`/games/${game.slug}`}
+                className={styles.imageWrap}
+                style={{ "--cover": `url("${src}")` } as CSSProperties}
+              >
+                <img src={src} alt={game.title} className={styles.image} />
               </Link>
-              <div className={styles.meta}>
-                <span>{formatRelease(game.release)}</span>
-                <StoreIcons store={game.store} />
-              </div>
-              <p>{t(game.description)}</p>
-              <div className={styles.footer}>
-                <div className={styles.devs}>
-                  {game.developers.slice(0, 5).map((dev) => (
-                    <Link
-                      key={dev.name}
-                      to={`/developers/${dev.slug}`}
-                      className={styles.devLink}
-                    >
-                      <DevLogo
-                        dev={dev}
-                        className={styles.teamLogo}
-                        initial={false}
-                      />
-                      {dev.name}
-                    </Link>
-                  ))}
-                  <SocialIcons links={game.developers[0].links} />
+              <div className={styles.info}>
+                <Link to={`/games/${game.slug}`} className={styles.titleLink}>
+                  <h3>{game.title}</h3>
+                </Link>
+                <div className={styles.meta}>
+                  <span>{formatRelease(game.release)}</span>
+                  <StoreIcons store={game.store} />
                 </div>
-                <ReportButton type="game" name={game.title} slug={game.slug} />
+                <p>{t(game.description)}</p>
+                <div className={styles.footer}>
+                  <div className={styles.devs}>
+                    {game.developers.slice(0, 5).map((dev) => (
+                      <Link
+                        key={dev.name}
+                        to={`/developers/${dev.slug}`}
+                        className={styles.devLink}
+                      >
+                        <DevLogo
+                          dev={dev}
+                          className={styles.teamLogo}
+                          initial={false}
+                        />
+                        {dev.name}
+                      </Link>
+                    ))}
+                    <SocialIcons links={game.developers[0].links} />
+                  </div>
+                  <ReportButton type="game" name={game.title} slug={game.slug} />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
