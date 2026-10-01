@@ -26,9 +26,9 @@ function FeaturedGame() {
   return (
     <section className={styles.section}>
       <SectionHeader
-        title={t({ es: "Juego destacado", en: "" })}
+        title={t({ es: "Juego destacado", en: "Featured game" })}
         to="/games"
-        linkLabel={t({ es: "Ver todos", en: "" })}
+        linkLabel={t({ es: "Ver todos", en: "View all" })}
       />
       <div className={styles.card}>
         <div className={styles.media}>
@@ -67,7 +67,7 @@ function FeaturedGame() {
           <p className={styles.description}>{t(game.description)}</p>
           <StoreIcons store={game.store} />
           <Link to={`/games/${game.slug}`} className={buttonStyles.button}>
-            {t({ es: "Ver juego", en: "" })}
+            {t({ es: "Ver juego", en: "View game" })}
             <span className={buttonStyles.arrow} aria-hidden="true">
               →
             </span>

@@ -73,33 +73,38 @@ function List() {
   return (
     <div>
       <section className="intro">
-        <h1>{t({ es: "Juegos de la Comunidad", en: "" })}</h1>
+        <h1>
+          {t({ es: "Juegos de la Comunidad", en: "Games by the community" })}
+        </h1>
         <p>
-          {t({ es: "Colección de Videojuegos hechos en Nuevo León", en: "" })}
+          {t({
+            es: "Colección de Videojuegos hechos en Nuevo León",
+            en: "Collection of games made in Nuevo León",
+          })}
         </p>
         <p>
-          {t({ es: "Para agregar tu proyecto,", en: "" })}{" "}
+          {t({ es: "Para agregar tu proyecto,", en: "To add your project," })}{" "}
           <SignupButton
             type="game"
-            label={t({ es: "llena este formulario", en: "" })}
+            label={t({ es: "llena este formulario", en: "fill out this form" })}
           />
         </p>
         <div className={styles.controls}>
           <ButtonGroup
-            label={t({ es: "Ordenar por:", en: "" })}
+            label={t({ es: "Ordenar por:", en: "Sort by:" })}
             options={[
-              ["random", t({ es: "Aleatorio", en: "" })],
-              ["title", t({ es: "Título", en: "" })],
-              ["release", t({ es: "Fecha", en: "" })],
+              ["random", t({ es: "Aleatorio", en: "Random" })],
+              ["title", t({ es: "Título", en: "Title" })],
+              ["release", t({ es: "Fecha", en: "Date" })],
             ]}
             value={sort}
             onChange={setSort}
           />
           <ButtonGroup
-            label={t({ es: "Vista:", en: "" })}
+            label={t({ es: "Vista:", en: "View" })}
             options={[
-              ["compact", t({ es: "Compacta", en: "" })],
-              ["poster", t({ es: "Póster", en: "" })],
+              ["compact", t({ es: "Compacta", en: "Compact" })],
+              ["poster", t({ es: "Póster", en: "Poster" })],
             ]}
             value={view}
             onChange={setView}

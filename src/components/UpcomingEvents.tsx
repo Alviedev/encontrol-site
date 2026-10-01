@@ -7,6 +7,7 @@ import {
 import styles from "./UpcomingEvents.module.css";
 import SectionHeader from "./SectionHeader";
 import buttonStyles from "./ArrowButton.module.css";
+import { t } from "../i18n";
 
 const upcoming = events.filter((e) => !isPast(e));
 
@@ -16,9 +17,15 @@ function UpcomingEvents() {
   return (
     <section className={styles.section}>
       <SectionHeader
-        title="Próximos Eventos"
+        title={t({
+          es: "Próximos Eventos",
+          en: "Upcoming Events",
+        })}
         to="/events"
-        linkLabel="Ver todos"
+        linkLabel={t({
+          es: "Ver todos",
+          en: "View all",
+        })}
       />
       <div className={styles.grid}>
         {upcoming.map((event) => (
@@ -44,7 +51,10 @@ function UpcomingEvents() {
                   rel="noreferrer"
                   className={buttonStyles.button}
                 >
-                  Regístrate
+                  {t({
+                    es: "Regístrate",
+                    en: "Sign up",
+                  })}
                   <span className={buttonStyles.arrow} aria-hidden="true">
                     →
                   </span>

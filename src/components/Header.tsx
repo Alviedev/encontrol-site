@@ -5,12 +5,12 @@ import styles from "./Header.module.css";
 import { lang, switchLang, t } from "../i18n";
 
 const links = [
-  ["/", t({ es: "Inicio", en: "" })],
-  ["/about", t({ es: "Nosotros", en: "" })],
-  ["/events", t({ es: "Eventos", en: "" })],
-  ["/developers", t({ es: "Devs", en: "" })],
-  ["/games", t({ es: "Juegos", en: "" })],
-  ["/contact", t({ es: "Contacto", en: "" })],
+  ["/", t({ es: "Inicio", en: "Home" })],
+  ["/about", t({ es: "Nosotros", en: "Us" })],
+  ["/events", t({ es: "Eventos", en: "Events" })],
+  ["/developers", t({ es: "Devs", en: "Devs" })],
+  ["/games", t({ es: "Juegos", en: "Games" })],
+  ["/contact", t({ es: "Contacto", en: "Contact" })],
 ] as const;
 
 function Header() {
