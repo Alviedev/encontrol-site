@@ -69,7 +69,7 @@ function Header() {
             lang="en"
             aria-label="English"
           >
-            EN
+            EN 🇺🇸
           </button>
         ) : (
           <button
@@ -78,7 +78,7 @@ function Header() {
             lang="es"
             aria-label="Español"
           >
-            ES
+            ES 🇲🇽
           </button>
         )}
       </nav>
