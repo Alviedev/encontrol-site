@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   border: 2px solid var(--blue-accent);
-  background-color: var(--blue-dark);
+  background-color: var(--blue-darker);
 }
 
 @media (max-width: 900px) {

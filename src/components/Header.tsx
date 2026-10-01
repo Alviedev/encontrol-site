@@ -6,10 +6,10 @@ import { lang, switchLang, t } from "../i18n";
 
 const links = [
   ["/", t({ es: "Inicio", en: "Home" })],
-  ["/about", t({ es: "Nosotros", en: "Us" })],
   ["/events", t({ es: "Eventos", en: "Events" })],
   ["/developers", t({ es: "Devs", en: "Devs" })],
   ["/games", t({ es: "Juegos", en: "Games" })],
+  ["/about", t({ es: "Nosotros", en: "Us" })],
   ["/contact", t({ es: "Contacto", en: "Contact" })],
 ] as const;
 
