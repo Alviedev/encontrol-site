@@ -527,7 +527,7 @@ export const games = gameList.map(withSteam);
 
 // Slug of the game shown on the home page (example, "PopSlinger").
 // Leave empty to rotate through every game, changing each Monday.
-const featuredSlug = "";
+const featuredSlug = "Eagle-knight-paradox";
 
 export function getFeaturedGame(): Game {
   if (featuredSlug) {
