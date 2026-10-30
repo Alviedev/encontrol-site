@@ -60,12 +60,18 @@
   right: 1.25rem;
 }
 
+/* Capped at about six games so prolific devs don't stretch their whole row; the rest scroll */
 .gameList {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
   border-top: 1px solid var(--blue-mid);
   padding-top: 0.6rem;
+  max-height: 12.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-accent) transparent;
 }
 
 /* One game per line icon + title */
@@ -85,9 +91,10 @@
   text-decoration: none;
 }
 
-/* Steam icon or gamepad */
+/* Steam/itch icon or gamepad */
 .gameIcon {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
+  object-fit: cover;
 }

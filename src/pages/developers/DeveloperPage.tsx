@@ -6,6 +6,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import ReportButton from "../../components/ReportButton";
 import DevLogo from "../../components/DevLogo";
+import GameGrid from "../../components/GameGrid";
 import { usePageMeta } from "../../meta";
 
 const NOT_FOUND = "Desarrollador no encontrado";
@@ -52,22 +53,7 @@ function DeveloperPage() {
 
       {devGames.length > 0 && (
         <div className={styles.games}>
-          <div className={styles.gamesGrid}>
-            {devGames.map((game) => (
-              <Link
-                key={game.slug}
-                to={`/games/${game.slug}`}
-                className={styles.gameCard}
-              >
-                <img
-                  src={game.imageUrl}
-                  alt={game.title}
-                  className={styles.gameImage}
-                />
-                <span>{game.title}</span>
-              </Link>
-            ))}
-          </div>
+          <GameGrid games={devGames} />
         </div>
       )}
     </div>

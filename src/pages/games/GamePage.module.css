@@ -130,39 +130,6 @@
   font-size: 1.25rem;
 }
 
-.relatedGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.relatedCard {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-decoration: none;
-  color: var(--white);
-  font-family: var(--font-pixel);
-  font-size: 0.55rem;
-}
-
-.relatedCard:hover {
-  color: var(--blue-accent);
-  text-decoration: none;
-}
-
-.relatedImage {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 2px solid var(--blue-mid);
-  transition: border-color 0.2s;
-}
-
-.relatedCard:hover .relatedImage {
-  border-color: var(--blue-accent);
-}
-
 .devLink {
   display: inline-flex;
   align-items: center;

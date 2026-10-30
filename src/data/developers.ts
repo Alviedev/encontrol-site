@@ -199,6 +199,7 @@ const devList: Developer[] = [
       website:
         "https://portafoliojooyink.my.canva.site/cursos?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
       instagram: "https://www.instagram.com/jooyink/",
+      itch: "https://itch.io/profile/jooyink",
     },
   },
   {
@@ -227,6 +228,52 @@ const devList: Developer[] = [
     logoUrl: "/devs/TeamO.jpg",
     links: {
       itch: "https://itch.io/profile/teamo",
+    },
+  },
+  {
+    slug: "Viut",
+    name: "Viut",
+    links: {
+      itch: "https://viut.itch.io/",
+      instagram: "https://www.instagram.com/viut24/",
+      bluesky: "https://bsky.app/profile/viutgamedev.bsky.social",
+    },
+  },
+  {
+    slug: "wolfsbane",
+    name: "Wolfsbane Studio",
+    logoUrl:
+      "https://cdn.bsky.app/img/avatar/plain/did:plc:abcwva4tn6nf4nr4czoyxvuf/bafkreif5q7hco26t7q7vtrwx77mxkq6d2si6i4umoq7g5oqzayivu5xxfq",
+    links: {
+      itch: "https://dhazard.itch.io/",
+      bluesky: "https://bsky.app/profile/goldenhunterx.bsky.social",
+    },
+  },
+  {
+    slug: "Ramiro",
+    name: "RamiroME",
+    logoUrl:
+      "https://cdna.artstation.com/p/users/avatars/000/372/656/large/9b17c55738fdf1a475ff7c166b7d0827.jpg?1487087270",
+    links: {
+      artstation: "https://www.artstation.com/ramirome",
+      instagram: "https://www.instagram.com/ramiromendozae/",
+      twitter: "https://x.com/ramiro__me",
+    },
+  },
+  {
+    slug: "azul",
+    name: "Azulbit8",
+    links: {
+      itch: "https://azulbit8.itch.io/",
+    },
+  },
+  {
+    slug: "alvie",
+    name: "Alviedev",
+    links: {
+      itch: "https://alviedev.itch.io/",
+      bluesky: "https://bsky.app/profile/alvie.dev",
+      twitter: "https://x.com/Alviedotdev",
     },
   },
 ];
