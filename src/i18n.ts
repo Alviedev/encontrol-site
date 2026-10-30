@@ -46,10 +46,14 @@ function browserLang(): Lang {
   return "es";
 }
 
+// A language-less path ("/games") as it appears in the given language ("/en/games")
+export function localizedPath(to: Lang, path: string): string {
+  return to === "en" ? EN_PREFIX + (path === "/" ? "" : path) : path;
+}
+
 function urlFor(to: Lang): string {
   const path = stripPrefix(location.pathname) ?? location.pathname;
-  const prefixed = to === "en" ? EN_PREFIX + (path === "/" ? "" : path) : path;
-  return prefixed + location.search + location.hash;
+  return localizedPath(to, path) + location.search + location.hash;
 }
 
 // Unprefixed URLs follow the visitor's choice (or browser language) and redirect to English if needed.

@@ -10,6 +10,7 @@ import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
 import { t } from "../../i18n";
+import { usePageMeta } from "../../meta";
 
 // Sortable "YYYY-MM-DD"-style key; vaguer releases sort after exact dates in the same period
 function getReleaseOrder(release: ReleaseDate): string {
@@ -28,6 +29,12 @@ function getReleaseOrder(release: ReleaseDate): string {
   }
 }
 
+const heading = { es: "Juegos de la Comunidad", en: "Games by the community" };
+const intro = {
+  es: "Colección de Videojuegos hechos en Nuevo León",
+  en: "Collection of games made in Nuevo León",
+};
+
 type SortMode = "random" | "title" | "release";
 
 type ViewMode = "compact" | "poster";
@@ -45,6 +52,7 @@ function savedView(): ViewMode {
 }
 
 function List() {
+  usePageMeta({ title: t(heading), description: t(intro) });
   const [sort, setSort] = useState<SortMode>("random");
   const [view, setViewState] = useState<ViewMode>(savedView);
 
@@ -73,15 +81,8 @@ function List() {
   return (
     <div>
       <section className="intro">
-        <h1>
-          {t({ es: "Juegos de la Comunidad", en: "Games by the community" })}
-        </h1>
-        <p>
-          {t({
-            es: "Colección de Videojuegos hechos en Nuevo León",
-            en: "Collection of games made in Nuevo León",
-          })}
-        </p>
+        <h1>{t(heading)}</h1>
+        <p>{t(intro)}</p>
         <p>
           {t({ es: "Para agregar tu proyecto,", en: "To add your project," })}{" "}
           <SignupButton

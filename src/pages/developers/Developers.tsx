@@ -9,12 +9,21 @@ import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
 import { FaGamepad } from "react-icons/fa";
+import { t } from "../../i18n";
+import { usePageMeta } from "../../meta";
+
+const heading = { es: "Desarrolladores", en: "" };
+const intro = {
+  es: "Los estudios e individuos detrás de los juegos en Nuevo León.",
+  en: "",
+};
 
 type SortMode = "random" | "alpha" | "games";
 
 const randomOrder = [...developers].sort(() => Math.random() - 0.5);
 
 function Developers() {
+  usePageMeta({ title: t(heading), description: t(intro) });
   const [sort, setSort] = useState<SortMode>("random");
 
   const sorted = useMemo(() => {
@@ -33,8 +42,8 @@ function Developers() {
   return (
     <div>
       <section className="intro">
-        <h1>Desarrolladores</h1>
-        <p>Los estudios e individuos detrás de los juegos en Nuevo León.</p>
+        <h1>{t(heading)}</h1>
+        <p>{t(intro)}</p>
         <p>
           Para agregarte o tu equipo,{" "}
           <SignupButton type="developer" label="llena este formulario" />

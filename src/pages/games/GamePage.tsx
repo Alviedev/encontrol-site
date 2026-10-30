@@ -8,15 +8,27 @@ import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
 import DevLogo from "../../components/DevLogo";
 import { t } from "../../i18n";
+import { usePageMeta } from "../../meta";
+
+const notFound = { es: "Juego no encontrado", en: "" };
 
 function GamePage() {
   const { slug } = useParams();
   const game = games.find((g) => g.slug === slug);
+  usePageMeta(
+    game
+      ? {
+          title: game.title,
+          description: t(game.description),
+          image: game.capsuleUrl ?? game.imageUrl,
+        }
+      : { title: t(notFound), noindex: true },
+  );
 
   if (!game) {
     return (
       <div className={styles.notFound}>
-        <h1>{t({ es: "Juego no encontrado", en: "" })}</h1>
+        <h1>{t(notFound)}</h1>
         <Link to="/games" className={styles.back}>
           <FaArrowLeft /> {t({ es: "Volver a la lista", en: "" })}
         </Link>

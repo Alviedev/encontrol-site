@@ -3,15 +3,27 @@ import styles from "./games/GamePage.module.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { members } from "../data/team";
 import SocialIcons from "../components/SocialIcons";
+import { usePageMeta } from "../meta";
+
+const NOT_FOUND = "Miembro no encontrado";
 
 function AboutMember() {
   const { user } = useParams();
   const member = members.find((m) => m.user === user);
+  usePageMeta(
+    member
+      ? {
+          title: member.name,
+          description: member.description,
+          image: member.image,
+        }
+      : { title: NOT_FOUND, noindex: true },
+  );
 
   if (!member) {
     return (
       <div className={styles.notFound}>
-        <h1>Miembro no encontrado</h1>
+        <h1>{NOT_FOUND}</h1>
         <Link to="/about" className={styles.back}>
           <FaArrowLeft /> Volver a Nosotros
         </Link>

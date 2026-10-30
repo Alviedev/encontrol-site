@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
 import { members } from "../data/team";
 import styles from "./About.module.css";
+import { t } from "../i18n";
+import { usePageMeta } from "../meta";
+
+const heading = { es: "Nosotros", en: "" };
 
 function About() {
+  usePageMeta({ title: t(heading) });
   return (
     <div>
       <section className="intro">
-        <h1>Nosotros</h1>
+        <h1>{t(heading)}</h1>
 
         <h1>¿Dónde nace EnControl?</h1>
         <p>

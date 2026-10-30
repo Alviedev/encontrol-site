@@ -9,6 +9,7 @@ import UpcomingEvents from "../components/UpcomingEvents";
 import FeaturedGame from "../components/FeaturedGame";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 import { t } from "../i18n";
+import { usePageMeta } from "../meta";
 
 const WAVE_WIDTH = 400;
 const WAVE_HEIGHT = 30;
@@ -31,6 +32,7 @@ function buildSineWavePath() {
 const SINE_WAVE_PATH = buildSineWavePath();
 
 function Home() {
+  usePageMeta();
   return (
     <div>
       <section className={styles.hero}>
