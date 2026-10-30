@@ -7,6 +7,14 @@ import {
   formatLocation,
 } from "../data/events";
 import styles from "./Events.module.css";
+import { t } from "../i18n";
+import { usePageMeta } from "../meta";
+
+const heading = { es: "Eventos", en: "" };
+const intro = {
+  es: "Juntadas, meetups y más de la comunidad EnControl.",
+  en: "",
+};
 
 const pastEvents = events.filter(isPast);
 
@@ -48,6 +56,7 @@ function useTimelineProgress(order: string) {
 }
 
 function Events() {
+  usePageMeta({ title: t(heading), description: t(intro) });
   const [order, setOrder] = useState<"asc" | "desc">("desc");
   const { cardRefs, reached } = useTimelineProgress(order);
 
@@ -58,8 +67,8 @@ function Events() {
 
   return (
     <div>
-      <h1>Eventos</h1>
-      <p>Juntadas, meetups y más de la comunidad EnControl.</p>
+      <h1>{t(heading)}</h1>
+      <p>{t(intro)}</p>
       <UpcomingEvents />
       <section className={`intro ${styles.intro}`}>
         <h1>¿Por qué asistir a eventos?</h1>

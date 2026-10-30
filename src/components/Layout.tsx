@@ -12,7 +12,9 @@ function Layout() {
     <MotionConfig reducedMotion="user">
       <Header />
       <main>
+        {/* No fade-in on first load: the page is already there, pre-rendered */}
         <AnimatePresence
+          initial={false}
           mode="wait"
           onExitComplete={() => window.scrollTo(0, 0)}
         >

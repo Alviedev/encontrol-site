@@ -2,12 +2,17 @@ import styles from "./Contact.module.css";
 import { DISCORD_INVITE, INSTAGRAM_URL } from "../data/socials";
 import { FaInstagram, FaEnvelope } from "react-icons/fa";
 import { FaBluesky, FaDiscord } from "react-icons/fa6";
+import { t } from "../i18n";
+import { usePageMeta } from "../meta";
+
+const heading = { es: "Contacto", en: "" };
 
 function Contact() {
+  usePageMeta({ title: t(heading) });
   return (
     <div>
       <section className={styles.intro}>
-        <h1>Contacto</h1>
+        <h1>{t(heading)}</h1>
         <p>Entremos en contacto! Estamos presentes en los siguientes medios:</p>
       </section>
 

@@ -4,12 +4,14 @@ import { QRCode } from "react-qr-code";
 import { games } from "../data/games";
 import { isReleased } from "../data/common";
 import styles from "./Showreel.module.css";
+import { usePageMeta } from "../meta";
 
 const clips = games
   .filter((g) => g.clip !== undefined)
   .sort(() => Math.random() - 0.5);
 
 function Showreel() {
+  usePageMeta({ title: "Showreel" });
   const [current, setCurrent] = useState(0);
   const [visible, setVisible] = useState(true);
 

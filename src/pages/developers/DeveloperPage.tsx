@@ -6,15 +6,23 @@ import { FaArrowLeft } from "react-icons/fa";
 import SocialIcons from "../../components/SocialIcons";
 import ReportButton from "../../components/ReportButton";
 import DevLogo from "../../components/DevLogo";
+import { usePageMeta } from "../../meta";
+
+const NOT_FOUND = "Desarrollador no encontrado";
 
 function DeveloperPage() {
   const { slug } = useParams();
   const dev = developers.find((d) => d.slug === slug);
+  usePageMeta(
+    dev
+      ? { title: dev.name, description: dev.bio, image: dev.logoUrl }
+      : { title: NOT_FOUND, noindex: true },
+  );
 
   if (!dev) {
     return (
       <div className={styles.notFound}>
-        <h1>Desarrollador no encontrado</h1>
+        <h1>{NOT_FOUND}</h1>
         <Link to="/developers" className={styles.back}>
           <FaArrowLeft /> Volver a desarrolladores
         </Link>
