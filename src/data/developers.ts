@@ -29,6 +29,8 @@ const devList: Developer[] = [
   {
     slug: "DonAttico",
     name: "Don Attico",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzI1MDAwMDM4LnBuZw==/80x80%23/IZScv7.png",
     links: {
       bluesky: "https://bsky.app/profile/whodunnitvn.bsky.social",
       patreon: "https://www.patreon.com/c/WHODUNNIT",
@@ -71,6 +73,8 @@ const devList: Developer[] = [
   {
     slug: "Calix",
     name: "CalixJumio",
+    logoUrl:
+      "https://img.itch.zone/aW1hZ2UyL3VzZXIvODg2NjIvMTExODAxOS5wbmc=/80x80%23/Iz1Tx5.png",
     links: {
       website: "https://calixjumio.wordpress.com/",
       bluesky: "https://bsky.app/profile/calixjumio.me",
@@ -98,6 +102,8 @@ const devList: Developer[] = [
   {
     slug: "Maurimo",
     name: "Maurimo",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzIwMDQyMDgyLnBuZw==/80x80%23/zi%2BD52.png",
     links: {
       bluesky: "https://bsky.app/profile/maurimo.dev",
       itch: "https://maurimo.itch.io/",
@@ -130,6 +136,8 @@ const devList: Developer[] = [
   {
     slug: "FelixRaymundo",
     name: "Felix Raymundo",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzI5OTMyMTgyLnBuZw==/80x80%23/zJvRd3.png",
     links: {
       youtube: "https://www.youtube.com/@mundayongstudio",
     },
@@ -145,6 +153,8 @@ const devList: Developer[] = [
   {
     slug: "PaperBoatStudios",
     name: "Paper Boat Studios",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzIyODc0ODk0LnBuZw==/80x80%23/HAzExn.png",
     links: {},
   },
   {
@@ -160,6 +170,8 @@ const devList: Developer[] = [
   {
     slug: "Skyque",
     name: "Skyque",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzYwOTI4MjAucG5n/80x80%23/HGz3o4.png",
     links: {
       twitter: "https://x.com/Skyque10",
       youtube: "https://www.youtube.com/@SkyqueDev",
@@ -178,8 +190,7 @@ const devList: Developer[] = [
   {
     slug: "AT7",
     name: "AT7Studio",
-    logoUrl:
-      "https://g-wcommunity.pstatic.net/20231228_296/1703701425167OS5Kj_JPEG/image.jpg",
+    logoUrl: "/devs/AT7Studio.png",
     links: {
       linkedin: "https://www.linkedin.com/company/at7-studio/home/",
       tiktok: "https://www.tiktok.com/@at7.studio",
@@ -193,8 +204,6 @@ const devList: Developer[] = [
   {
     slug: "joy",
     name: "Jooyink",
-    logoUrl:
-      "https://instagram.fntr10-2.fna.fbcdn.net/v/t51.82787-19/764422815_18613349902035035_2476274962889979892_n.jpg",
     links: {
       website:
         "https://portafoliojooyink.my.canva.site/cursos?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
@@ -233,6 +242,8 @@ const devList: Developer[] = [
   {
     slug: "Viut",
     name: "Viut",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzIwMzMwNjMuanBn/80x80%23/cPiXv3.jpg",
     links: {
       itch: "https://viut.itch.io/",
       instagram: "https://www.instagram.com/viut24/",
@@ -263,6 +274,8 @@ const devList: Developer[] = [
   {
     slug: "azul",
     name: "Azulbit8",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzY4OTUyNTMucG5n/80x80%23/yxj4p3.png",
     links: {
       itch: "https://azulbit8.itch.io/",
     },
@@ -270,6 +283,8 @@ const devList: Developer[] = [
   {
     slug: "alvie",
     name: "Alviedev",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzI0MTM0NTg5LnBuZw==/80x80%23/QN1pPJ.png",
     links: {
       itch: "https://alviedev.itch.io/",
       bluesky: "https://bsky.app/profile/alvie.dev",
