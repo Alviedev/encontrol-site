@@ -1,0 +1,59 @@
+.cover {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 616 / 353;
+  background-color: var(--blue-darker);
+}
+
+/* Leftover space is filled with a blurred copy of the same image instead of empty bars */
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: -2rem;
+  background: var(--cover) center / cover;
+  filter: blur(1.5rem) brightness(0.6);
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Split: the whole cover on the left, a strip of screenshots filling the rest */
+.split {
+  justify-content: flex-start;
+}
+
+.split::before {
+  content: none;
+}
+
+.split .image {
+  width: auto;
+  max-width: 75%;
+  border-right: 2px solid var(--blue-accent);
+}
+
+.screenshots {
+  flex: 1;
+  align-self: stretch;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.screenshots img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}

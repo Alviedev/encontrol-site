@@ -1,4 +1,16 @@
 {
+  "1419510": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1419510/capsule_616x353.jpg?t=1725404531",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1419510/library_600x900_2x.jpg?t=1725404531",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/1419510/4d9afad621266582ea58d789762e88e4c5fbbcce.jpg",
+    "description": {
+      "en": "A free roguelike deckbuilder about becoming an LMAD in a fantasy way. Get cards by taking classes, build a deck to battle against projects and complete all semesters to graduate."
+    },
+    "release": {
+      "type": "date",
+      "value": "2023-01-20"
+    }
+  },
   "1667490": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1667490/capsule_616x353.jpg?t=1791383898",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1667490/library_600x900_2x.jpg?t=1791383898",
@@ -9,6 +21,18 @@
     "release": {
       "type": "date",
       "value": "2021-07-15"
+    }
+  },
+  "1869870": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1869870/capsule_616x353.jpg?t=1790950308",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1869870/library_600x900_2x.jpg?t=1790950308",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/1869870/c5dde5a300035ffa829cff7fc356d498464aa288.jpg",
+    "description": {
+      "en": "Dive into the world of divination with the Cartomancy Anthology, a collection of introspective and compact digital experiences presented together in a virtual tarot deck."
+    },
+    "release": {
+      "type": "date",
+      "value": "2022-08-09"
     }
   },
   "1928320": {
@@ -24,6 +48,18 @@
       "value": "2022-04-14"
     }
   },
+  "2318570": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2318570/capsule_616x353.jpg?t=1678482747",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2318570/library_600x900_2x.jpg?t=1678482747",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2318570/c4f05d1999c7c616f619e254d156e665328b4917.jpg",
+    "description": {
+      "en": "Retro match 3 with a Bug juggling at his job.\r\nLine tiles in a line to destroy them, but the way to move them changes constantly.\r\n\r\nBe a Bug, Do a Work, Match a 3"
+    },
+    "release": {
+      "type": "date",
+      "value": "2023-03-10"
+    }
+  },
   "2376610": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/0bedbf2b415fe6c4a9b40f883f114459d695543a/capsule_616x353_2x.jpg?t=1792439184",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2376610/eaa976dba35e9d5a604834d875e5e35ba0660665/library_capsule_2x.jpg?t=1792439184",
@@ -37,6 +73,18 @@
       "value": "2026-02-06"
     }
   },
+  "2456260": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456260/capsule_616x353.jpg?t=1729004107",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2456260/library_600x900_2x.jpg?t=1729004107",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2456260/7cf070298bb9b5bb9e099a8a07e5d39a8450d8fe.jpg",
+    "description": {
+      "en": "Discover the joy of building tiny structures with board game pieces in this relaxing and small sandbox game. Stack and create unique buildings. Construct whatever you want – no puzzles to solve, no races to win."
+    },
+    "release": {
+      "type": "date",
+      "value": "2024-06-19"
+    }
+  },
   "2530280": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2530280/capsule_616x353.jpg?t=1768543365",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2530280/library_600x900_2x.jpg?t=1768543365",
@@ -48,6 +96,26 @@
     "release": {
       "type": "date",
       "value": "2026-01-16"
+    }
+  },
+  "2598120": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2598120/capsule_616x353.jpg?t=1759950714",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2598120/library_600x900_2x.jpg?t=1759950714",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2598120/8d26022bb8509855107dab6645148f977f19926b.jpg",
+    "description": {
+      "en": "You're a 6 years old witch and today, you're home alone: turn the house upside-down, play games with your sister, race to other dimensions and bewitch your frog plushie in this charming short narrative RPG!"
+    },
+    "release": {
+      "type": "date",
+      "value": "2024-01-29"
+    }
+  },
+  "2845820": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2845820/capsule_616x353.jpg?t=1748452269",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2845820/library_600x900_2x.jpg?t=1748452269",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/2845820/626a48ff9987d412dfbe2913c0a330e87b8cf5ea.jpg",
+    "description": {
+      "en": "REAL-TIME auto-battler card game! BUILD your DECK, SUMMON morpis, PLAY cards to POWER UP your morpis and FIGHT against evil forces. Think and act fast in this real-time roguelike deck-builder game!"
     }
   },
   "2963540": {
@@ -129,6 +197,15 @@
     "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3851280/8d4e9c4b9b1bde4bdda9d1fc685b032e06171077.jpg",
     "description": {
       "en": "WHODUNNIT is a mystery visual novel following a man who must answer a burning question: who the hell did he hook up with last night?"
+    }
+  },
+  "3879020": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3879020/08b04b14db142dce17261fb53aca4284f802502d/capsule_616x353_2x.jpg?t=1763212167",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3879020/616eb4a32c25f98410e7ece5d387d197489528a5/library_capsule_2x.jpg?t=1763212167",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/3879020/4cf77eda2adf9d126397900629383cea638d8146.jpg",
+    "description": {
+      "es": "Rinny Platformer Rage Game es un juego plataformero shitpost inspirado en Pretty Blood (la cual ya no nos afiliamos), tambien teniendo mucha inspiracion en UNDERTALE y DELTARUNE. Teniendo una historia que sirve como una precuela a Pretty Blood (ya no, porque no seguimos el canon).",
+      "en": "Rinny Platformer Rage Game is a platformer shitpost game inspired on various games, also having a lot of inspiration in UNDERTALE and DELTARUNE. Facing a story that goes through 4 chapters from 0 to 3"
     }
   },
   "3977270": {

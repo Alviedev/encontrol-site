@@ -34,7 +34,8 @@ export type Game = {
   description: Localized;
   imageUrl: string; // tall
   capsuleUrl?: string; // wide
-  iconUrl?: string; // small square, from Steam
+  iconUrl?: string; // small square, from Steam or itch
+  screenshots?: string[]; // from itch
   clip?: GameClip;
   developers: Developer[];
   store: StoreLinks;

@@ -78,39 +78,6 @@
   padding-bottom: 0.5rem;
 }
 
-.gamesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.gameCard {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  text-decoration: none;
-  color: var(--white);
-  font-family: var(--font-pixel);
-  font-size: 0.55rem;
-}
-
-.gameCard:hover {
-  color: var(--blue-accent);
-  text-decoration: none;
-}
-
-.gameImage {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 2px solid var(--blue-mid);
-  transition: border-color 0.2s;
-}
-
-.gameCard:hover .gameImage {
-  border-color: var(--blue-accent);
-}
-
 .notFound {
   display: flex;
   flex-direction: column;

@@ -7,6 +7,7 @@ import SocialIcons from "../../components/SocialIcons";
 import StoreIcons from "../../components/StoreIcons";
 import ReportButton from "../../components/ReportButton";
 import DevLogo from "../../components/DevLogo";
+import GameGrid from "../../components/GameGrid";
 import { t } from "../../i18n";
 import { usePageMeta } from "../../meta";
 
@@ -100,22 +101,7 @@ function GamePage() {
       {relatedGames.length > 0 && (
         <div className={styles.related}>
           <h2>{t({ es: "Más juegos de este desarrollador", en: "" })}</h2>
-          <div className={styles.relatedGrid}>
-            {relatedGames.map((related) => (
-              <Link
-                key={related.id}
-                to={`/games/${related.slug}`}
-                className={styles.relatedCard}
-              >
-                <img
-                  src={related.imageUrl}
-                  alt={related.title}
-                  className={styles.relatedImage}
-                />
-                <span>{related.title}</span>
-              </Link>
-            ))}
-          </div>
+          <GameGrid games={relatedGames} />
         </div>
       )}
     </div>

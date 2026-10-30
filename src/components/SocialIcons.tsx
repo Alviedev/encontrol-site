@@ -17,7 +17,12 @@ import {
   FaTiktok,
   FaPatreon,
 } from "react-icons/fa6";
-import { SiItchdotio, SiLinktree, SiWebtoon } from "react-icons/si";
+import {
+  SiArtstation,
+  SiItchdotio,
+  SiLinktree,
+  SiWebtoon,
+} from "react-icons/si";
 
 // Add a platform here and it becomes a valid key
 export const socialIcons = {
@@ -38,6 +43,7 @@ export const socialIcons = {
   webtoon: ["Webtoon", SiWebtoon],
   patreon: ["Patreon", FaPatreon],
   reddit: ["Reddit", FaReddit],
+  artstation: ["ArtStation", SiArtstation],
 } satisfies IconMap<string>;
 
 export type TeamLinks = Partial<Record<keyof typeof socialIcons, string>>;

@@ -20,7 +20,7 @@ export function withSteam(game: Game): Game {
     ...game,
     imageUrl: info.posterUrl ?? game.imageUrl,
     capsuleUrl: info.capsuleUrl,
-    iconUrl: info.iconUrl,
+    iconUrl: info.iconUrl ?? game.iconUrl,
     description: {
       es: info.description?.es || game.description.es,
       en: info.description?.en || game.description.en,

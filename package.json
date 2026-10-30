@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "fetch-data": "node scripts/fetch-steam.mjs && node scripts/fetch-bluesky.mjs && node scripts/fetch-discord.mjs",
+    "fetch-data": "node scripts/fetch-steam.mjs && node scripts/fetch-itch.mjs && node scripts/fetch-bluesky.mjs && node scripts/fetch-discord.mjs",
     "predev": "npm run fetch-data",
     "dev": "vite",
     "prebuild": "npm run fetch-data",

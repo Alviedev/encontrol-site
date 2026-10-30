@@ -3,6 +3,7 @@ import { AnimatePresence, MotionConfig } from "framer-motion";
 import Header from "./Header";
 import Footer from "./Footer";
 import PageTransition from "./PageTransition";
+import RecentAdditions from "./RecentAdditions";
 
 function Layout() {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ function Layout() {
         </AnimatePresence>
       </main>
       <Footer />
+      {import.meta.env.DEV && <RecentAdditions />}
     </MotionConfig>
   );
 }

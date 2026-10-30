@@ -1,4 +1,4 @@
-import { type CSSProperties, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { games } from "../../data/games";
 import { type ReleaseDate, formatRelease } from "../../data/common";
 import styles from "./List.module.css";
@@ -9,6 +9,7 @@ import ReportButton from "../../components/ReportButton";
 import SignupButton from "../../components/SignupButton";
 import ButtonGroup from "../../components/ButtonGroup";
 import DevLogo from "../../components/DevLogo";
+import GameCover from "../../components/GameCover";
 import { t } from "../../i18n";
 import { usePageMeta } from "../../meta";
 
@@ -117,21 +118,21 @@ function List() {
         className={`${styles.list} ${view === "compact" ? styles.compact : ""}`}
       >
         {sorted.map((game, index) => {
-          const src =
-            view === "compact"
-              ? (game.capsuleUrl ?? game.imageUrl)
-              : game.imageUrl;
           return (
             <div
               key={game.id}
               className={`${styles.card} ${index % 2 !== 0 ? styles.reverse : ""}`}
             >
-              <Link
-                to={`/games/${game.slug}`}
-                className={styles.imageWrap}
-                style={{ "--cover": `url("${src}")` } as CSSProperties}
-              >
-                <img src={src} alt={game.title} className={styles.image} />
+              <Link to={`/games/${game.slug}`} className={styles.imageWrap}>
+                {view === "compact" ? (
+                  <GameCover game={game} />
+                ) : (
+                  <img
+                    src={game.imageUrl}
+                    alt={game.title}
+                    className={styles.image}
+                  />
+                )}
               </Link>
               <div className={styles.info}>
                 <Link to={`/games/${game.slug}`} className={styles.titleLink}>
