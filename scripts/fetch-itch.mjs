@@ -1,6 +1,7 @@
 // Pulls the full-size cover, tab icon and screenshots for every game with an itch.io link
-// into src/data/itch.json. Runs before `dev` and `build`; if itch can't be
-// reached, the existing itch.json is kept so the site still builds.
+// into src/data/itch.json. Runs before `dev` and `build`, but only fetches games that
+// aren't in itch.json yet, so itch isn't hit on every run; `npm run refresh-itch`
+// re-fetches everything. If itch can't be reached, the existing data is kept.
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 
 const GAMES = new URL("../src/data/games.ts", import.meta.url);
@@ -29,7 +30,10 @@ async function get(url, retries = 3) {
     await sleep(3000);
     return get(url, retries - 1);
   }
-  if (!res.ok) throw new Error(`itch responded ${res.status} for ${url}`);
+  if (!res.ok)
+    throw Object.assign(new Error(`itch responded ${res.status} for ${url}`), {
+      status: res.status,
+    });
   return res.text();
 }
 
@@ -52,20 +56,30 @@ async function getGame(url) {
 
 async function main() {
   const previous = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : {};
-  const data = {};
+  const refreshAll = process.argv.includes("--all");
+  const todo = refreshAll ? urls : urls.filter((url) => !(url in previous));
+  // Keep known games; drop ones no longer in games.ts
+  const data = Object.fromEntries(
+    urls.filter((url) => url in previous).map((url) => [url, previous[url]]),
+  );
   let updated = 0;
-  // One game at a time so itch doesn't rate limit us
-  for (const url of urls) {
+  // One game at a time, with a pause, so itch doesn't rate limit us
+  for (const url of todo) {
     try {
       data[url] = await getGame(url);
       updated++;
-    } catch {
-      if (previous[url]) data[url] = previous[url];
+    } catch (err) {
+      // A removed page stays recorded (empty) so it isn't retried on every run
+      if (err.status === 404) data[url] = {};
     }
+    await sleep(1000);
   }
-  if (updated === 0) throw new Error("no games could be fetched");
   writeFileSync(OUT, JSON.stringify(data, null, 2) + "\n");
-  console.log(`itch: updated ${updated}/${urls.length} games`);
+  console.log(
+    todo.length === 0
+      ? "itch: nothing new to fetch"
+      : `itch: fetched ${updated}/${todo.length} games`,
+  );
 }
 
 main().catch((err) => {
