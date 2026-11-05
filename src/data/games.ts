@@ -1809,6 +1809,160 @@ const gameList: Game[] = [
       duration: 30,
     },
   },
+  {
+    id: 102,
+    slug: "Wreckmate",
+    title: "Wreckmate",
+    description: {
+      es: "",
+      en: "Balance the cargo piling up on your boat and keep it from capsizing for as long as you can.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/wreckmate.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      website: "https://dangoodgames.org/wreckmate-play",
+    },
+    release: { type: "tbd" },
+  },
+  {
+    id: 103,
+    slug: "SpringJump",
+    title: "Spring Jump",
+    description: {
+      es: "",
+      en: "An endless frog jumper: bounce leaf to leaf, grab coins, dodge sneaky crabs, and unlock new frog styles. Chain Super Jump combos to climb even higher.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/springjump.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      appstore: "https://apps.apple.com/mx/app/spring-the-frog/id6754373449",
+      website: "https://dangoodgames.org/springjump/",
+    },
+    release: { type: "date", value: "2026-07-09" },
+  },
+  {
+    id: 104,
+    slug: "SecretMissionLoops",
+    title: "Secret Mission: Loops",
+    description: {
+      es: "",
+      en: "Embark on a series of secret missions where loops might be involved in some way or another. Try to beat your high score!",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/secret-mission-loops.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      itch: "https://danielmartinez98.itch.io/secret-mission-loops",
+      website: "https://dangoodgames.org/secret-mission-loops-play",
+    },
+    release: { type: "date", value: "2025-08-03" },
+  },
+  {
+    id: 105,
+    slug: "RedHerring",
+    title: "Red Herring",
+    description: {
+      es: "",
+      en: "A guest is dead at the Baron's dinner party. Relive the night through the suspects' memories, then put the right clue to the right suspect.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/red-herring.jpg",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      itch: "https://danielmartinez98.itch.io/red-herring",
+      website: "https://dangoodgames.org/red-herring",
+    },
+    release: { type: "date", value: "2026-08-30" },
+  },
+  {
+    id: 106,
+    slug: "SudokuForPros",
+    title: "Sudoku for Pros",
+    description: {
+      es: "",
+      en: "A clean, modern, paper-themed Sudoku with multiple difficulty levels, a daily puzzle, and one-handed controls.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/BasicSudoku.jpg",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      appstore: "https://apps.apple.com/mx/app/sudoku-for-pros/id6754261052",
+      website: "https://dangoodgames.org/basicsudoku/",
+    },
+    release: { type: "date", value: "2025-12-17" },
+  },
+  {
+    id: 107,
+    slug: "PlanetSnatcher",
+    title: "Planet Snatcher",
+    description: {
+      es: "",
+      en: "Navigate through space and collect planets while avoiding obstacles.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/PlanetSnatcher.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      website: "https://dangoodgames.org/planetsnatcher-play",
+    },
+    release: { type: "tbd" },
+  },
+  {
+    id: 108,
+    slug: "CocaVsBepis",
+    title: "COCA Vs Bepis",
+    description: {
+      es: "",
+      en: "Two players, one keyboard: two teams fight over a randomly generated map, smashing through walls and grabbing gold. Spend it on banks or power units and take over the board.",
+    },
+    imageUrl:
+      "https://dangoodgames.org/images/coca-vs-bepis.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      website: "https://dangoodgames.org/randomizergame-play",
+    },
+    release: { type: "tbd" },
+  },
+  {
+    id: 109,
+    slug: "AiValet",
+    title: "\"Ai\" Valet",
+    description: {
+      es: "",
+      en: "In the future year of 2026, cars are said to be driven by artificial intelligence, but in truth we just ask you, on the other side of the world, to drive and park them for our users. Be sure to drive in a slick fashion!",
+    },
+    imageUrl:
+      "https://img.itch.zone/aW1nLzI1NDU5MjU1LnBuZw==/315x250%23c/nKhnTm.png",
+    developers: [getDev("Dan Good Games")],
+    store: {
+      itch: "https://danielmartinez98.itch.io/ai-valet",
+    },
+    release: { type: "date", value: "2026-02-08" },
+  },
+  {
+    id: 110,
+    slug: "UtopiaBirthOfTheHeroes",
+    title: "Utopia: Birth of The Heroes",
+    description: {
+      es: "",
+      en: "One war and three heroes on opposing sides. Love, conviction and sacrifice will define them. Utopia is a story-rich visual novel about creating a perfect society, and the cost of reaching it.",
+    },
+    imageUrl:
+      "https://shared.steamstatic.com/store_item_assets/steam/apps/4235700/library_600x900_2x.jpg",
+    developers: [getDev("Mana Core Game Studios")],
+    store: {
+      steam: "https://store.steampowered.com/app/4235700/Utopia_Birth_of_The_Heroes/",
+      website: "https://manacoregs.com/utopia/",
+    },
+    release: { type: "date", value: "2026-07-27" },
+    clip: {
+      type: "youtube",
+      url: "https://www.youtube.com/embed/fi3n3thfLGI?autoplay=1&mute=1&start=0",
+      duration: 30,
+    },
+  },
 ];
 
 export const games = gameList.map(withItch).map(withSteam);

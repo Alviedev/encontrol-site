@@ -232,6 +232,19 @@
       "value": "2025-10-07"
     }
   },
+  "4235700": {
+    "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4235700/a6fdded13979584cf34b5bc0f0109e0ed9860f54/capsule_616x353_latam_2x.jpg?t=1792789859",
+    "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4235700/21850dadbf11f75d517eb63d67b6877901dce92d/library_capsule_latam_2x.jpg?t=1792789859",
+    "iconUrl": "https://shared.akamai.steamstatic.com/community_assets/images/apps/4235700/20752ef46b96eb5a57f2b5a21ace4494a71c92e6.jpg",
+    "description": {
+      "es": "Una guerra y tres héroes en bandos opuestos. El amor, la convicción y el sacrificio los definirán. Utopía es una novela visual de narrativa profunda sobre la creación de una sociedad perfecta y el costo de alcanzarla.",
+      "en": "One war and three heroes on opposing sides. Love, conviction and sacrifice will define them. Utopia is a story-rich visual novel about creating a perfect society, and the cost of reaching it."
+    },
+    "release": {
+      "type": "date",
+      "value": "2026-07-27"
+    }
+  },
   "4841820": {
     "capsuleUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4841820/cb329251e6a2a47d2bdf26e059431be8fbeab218/capsule_616x353_2x.jpg?t=1790951315",
     "posterUrl": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4841820/b51c7ec4c4ccc26108d387222f1e337822993fe7/library_capsule_2x.jpg?t=1790951315",

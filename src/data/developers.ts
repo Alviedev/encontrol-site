@@ -291,6 +291,31 @@ const devList: Developer[] = [
       twitter: "https://x.com/Alviedotdev",
     },
   },
+  {
+    slug: "DanGoodGames",
+    name: "Dan Good Games",
+    logoUrl:
+      "https://img.itch.zone/aW1nLzI1NDg1NTAxLnBuZw==/80x80%23/Bcj%2Bn0.png",
+    links: {
+      website: "https://dangoodgames.org/",
+      itch: "https://danielmartinez98.itch.io/",
+    },
+  },
+  {
+    slug: "ManaCore",
+    name: "Mana Core Game Studios",
+    logoUrl:
+      "https://avatars.fastly.steamstatic.com/c02e1759107b299780b9246f848c1c72d8aa81ac_full.jpg",
+    links: {
+      website: "https://manacoregs.com/",
+      steam: "https://store.steampowered.com/app/4235700/Utopia_Birth_of_The_Heroes/",
+      twitter: "https://x.com/ManaCoreGS",
+      instagram: "https://www.instagram.com/manacoregs/",
+      facebook: "https://www.facebook.com/people/Mana-Core-GS/61584551773717/",
+      tiktok: "https://www.tiktok.com/@manacoregs",
+      youtube: "https://www.youtube.com/channel/UCrFx38XI5m3PGR1igbWyaKA",
+    },
+  },
 ];
 
 export const developers = devList.map(withBlueskyAvatar);
