@@ -1759,8 +1759,7 @@ const gameList: Game[] = [
       es: "",
       en: "Have you ever seen a long long train? Play 3 microgames on board the Long Long Train from the future. Made for the Tu juego a Juicio Jam.",
     },
-    imageUrl:
-      "https://img.itch.zone/aW1nLzY4ODc5MzQucG5n/original/mcdejd.png",
+    imageUrl: "https://img.itch.zone/aW1nLzY4ODc5MzQucG5n/original/mcdejd.png",
     developers: [getDev("Azulbit8")],
     store: {
       itch: "https://azulbit8.itch.io/long-long-train",
@@ -1817,8 +1816,7 @@ const gameList: Game[] = [
       es: "",
       en: "Balance the cargo piling up on your boat and keep it from capsizing for as long as you can.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/wreckmate.png",
+    imageUrl: "https://dangoodgames.org/images/wreckmate.png",
     developers: [getDev("Dan Good Games")],
     store: {
       website: "https://dangoodgames.org/wreckmate-play",
@@ -1833,8 +1831,7 @@ const gameList: Game[] = [
       es: "",
       en: "An endless frog jumper: bounce leaf to leaf, grab coins, dodge sneaky crabs, and unlock new frog styles. Chain Super Jump combos to climb even higher.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/springjump.png",
+    imageUrl: "https://dangoodgames.org/images/springjump.png",
     developers: [getDev("Dan Good Games")],
     store: {
       appstore: "https://apps.apple.com/mx/app/spring-the-frog/id6754373449",
@@ -1850,8 +1847,7 @@ const gameList: Game[] = [
       es: "",
       en: "Embark on a series of secret missions where loops might be involved in some way or another. Try to beat your high score!",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/secret-mission-loops.png",
+    imageUrl: "https://dangoodgames.org/images/secret-mission-loops.png",
     developers: [getDev("Dan Good Games")],
     store: {
       itch: "https://danielmartinez98.itch.io/secret-mission-loops",
@@ -1867,8 +1863,7 @@ const gameList: Game[] = [
       es: "",
       en: "A guest is dead at the Baron's dinner party. Relive the night through the suspects' memories, then put the right clue to the right suspect.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/red-herring.jpg",
+    imageUrl: "https://dangoodgames.org/images/red-herring.jpg",
     developers: [getDev("Dan Good Games")],
     store: {
       itch: "https://danielmartinez98.itch.io/red-herring",
@@ -1884,8 +1879,7 @@ const gameList: Game[] = [
       es: "",
       en: "A clean, modern, paper-themed Sudoku with multiple difficulty levels, a daily puzzle, and one-handed controls.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/BasicSudoku.jpg",
+    imageUrl: "https://dangoodgames.org/images/BasicSudoku.jpg",
     developers: [getDev("Dan Good Games")],
     store: {
       appstore: "https://apps.apple.com/mx/app/sudoku-for-pros/id6754261052",
@@ -1901,8 +1895,7 @@ const gameList: Game[] = [
       es: "",
       en: "Navigate through space and collect planets while avoiding obstacles.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/PlanetSnatcher.png",
+    imageUrl: "https://dangoodgames.org/images/PlanetSnatcher.png",
     developers: [getDev("Dan Good Games")],
     store: {
       website: "https://dangoodgames.org/planetsnatcher-play",
@@ -1917,8 +1910,7 @@ const gameList: Game[] = [
       es: "",
       en: "Two players, one keyboard: two teams fight over a randomly generated map, smashing through walls and grabbing gold. Spend it on banks or power units and take over the board.",
     },
-    imageUrl:
-      "https://dangoodgames.org/images/coca-vs-bepis.png",
+    imageUrl: "https://dangoodgames.org/images/coca-vs-bepis.png",
     developers: [getDev("Dan Good Games")],
     store: {
       website: "https://dangoodgames.org/randomizergame-play",
@@ -1928,7 +1920,7 @@ const gameList: Game[] = [
   {
     id: 109,
     slug: "AiValet",
-    title: "\"Ai\" Valet",
+    title: '"Ai" Valet',
     description: {
       es: "",
       en: "In the future year of 2026, cars are said to be driven by artificial intelligence, but in truth we just ask you, on the other side of the world, to drive and park them for our users. Be sure to drive in a slick fashion!",
@@ -1953,7 +1945,8 @@ const gameList: Game[] = [
       "https://shared.steamstatic.com/store_item_assets/steam/apps/4235700/library_600x900_2x.jpg",
     developers: [getDev("Mana Core Game Studios")],
     store: {
-      steam: "https://store.steampowered.com/app/4235700/Utopia_Birth_of_The_Heroes/",
+      steam:
+        "https://store.steampowered.com/app/4235700/Utopia_Birth_of_The_Heroes/",
       website: "https://manacoregs.com/utopia/",
     },
     release: { type: "date", value: "2026-07-27" },
@@ -1969,7 +1962,7 @@ export const games = gameList.map(withItch).map(withSteam);
 
 // Slug of the game shown on the home page (example, "PopSlinger").
 // Leave empty to rotate through every game, changing each Monday.
-const featuredSlug = "Eagle-knight-paradox";
+const featuredSlug = "";
 
 export function getFeaturedGame(): Game {
   if (featuredSlug) {
