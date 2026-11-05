@@ -5,6 +5,7 @@ import {
   FaPlaystation,
   FaGlobe,
   FaGooglePlay,
+  FaAppStoreIos,
 } from "react-icons/fa";
 import {
   SiGogdotcom,
@@ -22,6 +23,7 @@ export const storeIcons = {
   xbox: ["Xbox", FaXbox],
   switch: ["Nintendo Switch", SiNintendoswitch],
   googleplay: ["Google Play", FaGooglePlay],
+  appstore: ["App Store", FaAppStoreIos],
   kickstarter: ["Kickstarter", SiKickstarter],
   website: ["Sitio web", FaGlobe],
 } satisfies IconMap<string>;

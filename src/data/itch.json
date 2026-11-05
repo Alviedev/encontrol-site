@@ -375,7 +375,8 @@
     "iconUrl": "https://img.itch.zone/aW1nLzMxMzc2Nzg2LnBuZw==/32x32%23/pgtV7X.png",
     "screenshots": [
       "https://img.itch.zone/aW1hZ2UvMzcyMzIwOC8zMTU1OTM0Mi5wbmc=/347x500/LGK%2BMk.png",
-      "https://img.itch.zone/aW1hZ2UvMzcyMzIwOC8zMTU2MDI2MS5wbmc=/347x500/gnWsy8.png"
+      "https://img.itch.zone/aW1hZ2UvMzcyMzIwOC8zMTU2MDI2MS5wbmc=/347x500/gnWsy8.png",
+      "https://img.itch.zone/aW1hZ2UvMzcyMzIwOC8zMTU5MzQzNC5wbmc=/347x500/f4YZnr.png"
     ]
   },
   "https://ppstudiomty.itch.io/arcade-defender": {
@@ -533,5 +534,21 @@
       "https://img.itch.zone/aW1hZ2UvMTMwMjQ5NS83NjAxOTYxLnBuZw==/347x500/xOFtfP.png",
       "https://img.itch.zone/aW1hZ2UvMTMwMjQ5NS83NjAxOTYwLnBuZw==/347x500/qZJr5X.png"
     ]
+  },
+  "https://danielmartinez98.itch.io/secret-mission-loops": {
+    "iconUrl": "https://img.itch.zone/aW1nLzIyNDkxNjczLnBuZw==/32x32%23/T3mhIr.png",
+    "screenshots": []
+  },
+  "https://danielmartinez98.itch.io/red-herring": {
+    "iconUrl": "https://img.itch.zone/aW1nLzI5NjMxNTc4LmpwZw==/32x32%23/IosXV6.jpg",
+    "screenshots": [
+      "https://img.itch.zone/aW1hZ2UvNDk1MjYzMC8yOTYzMTkzMC5qcGc=/347x500/vidgnG.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDk1MjYzMC8yOTc3MDg3OC5qcGc=/347x500/5Pkn3j.jpg",
+      "https://img.itch.zone/aW1hZ2UvNDk1MjYzMC8yOTYzMzQyNS5qcGc=/347x500/Fy5ONt.jpg"
+    ]
+  },
+  "https://danielmartinez98.itch.io/ai-valet": {
+    "iconUrl": "https://img.itch.zone/aW1nLzI1NDU5MjU1LnBuZw==/32x32%23/rbcSHi.png",
+    "screenshots": []
   }
 }
